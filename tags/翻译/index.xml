@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>翻译 on Simon&#39;s Lodge</title>
+    <link>https://simonyoungcn.github.io/tags/%E7%BF%BB%E8%AF%91/</link>
+    <description>Recent content in 翻译 on Simon&#39;s Lodge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 12 Jul 2022 18:20:51 +0800</lastBuildDate><atom:link href="https://simonyoungcn.github.io/tags/%E7%BF%BB%E8%AF%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>考试乱猜</title>
+      <link>https://simonyoungcn.github.io/post/sat-guessing/</link>
+      <pubDate>Tue, 12 Jul 2022 18:20:51 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/sat-guessing/</guid>
+      <description>https://what-if.xkcd.com/2/ Rob Balder 如果每个SAT1考生做多选题时都乱猜一气会发生什么？会有多少个满分呢？ 一个也没有。 SAT测试是面对高中生的标准化测试，与ACT（美国大</description>
+    </item>
+    
+    <item>
+      <title>相对论棒球</title>
+      <link>https://simonyoungcn.github.io/post/relativistic-baseball/</link>
+      <pubDate>Tue, 28 Jun 2022 12:32:00 +0000</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/relativistic-baseball/</guid>
+      <description>https://what-if.xkcd.com/1/ Ellen Mcmanis 如果你用0.9倍光速扔出一个棒球, 将会发生什么？ 让我们暂且将我们如何加速棒球这个问题放在一边。假设它就是一次普通的掷球，不过在投球手掷</description>
+    </item>
+    
+  </channel>
+</rss>

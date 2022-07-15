@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simon&#39;s Lodge</title>
+    <link>https://simonyoungcn.github.io/</link>
+    <description>Recent content on Simon&#39;s Lodge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 12 Jul 2022 18:20:51 +0800</lastBuildDate><atom:link href="https://simonyoungcn.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>考试乱猜</title>
+      <link>https://simonyoungcn.github.io/post/sat-guessing/</link>
+      <pubDate>Tue, 12 Jul 2022 18:20:51 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/sat-guessing/</guid>
+      <description>https://what-if.xkcd.com/2/ Rob Balder 如果每个SAT1考生做多选题时都乱猜一气会发生什么？会有多少个满分呢？ 一个也没有。 SAT测试是面对高中生的标准化测试，与ACT（美国大</description>
+    </item>
+    
+    <item>
+      <title>相对论棒球</title>
+      <link>https://simonyoungcn.github.io/post/relativistic-baseball/</link>
+      <pubDate>Tue, 28 Jun 2022 12:32:00 +0000</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/relativistic-baseball/</guid>
+      <description>https://what-if.xkcd.com/1/ Ellen Mcmanis 如果你用0.9倍光速扔出一个棒球, 将会发生什么？ 让我们暂且将我们如何加速棒球这个问题放在一边。假设它就是一次普通的掷球，不过在投球手掷</description>
+    </item>
+    
+    <item>
+      <title>关于翻译xkcd-what if的一点说明</title>
+      <link>https://simonyoungcn.github.io/post/explanation/</link>
+      <pubDate>Mon, 27 Jun 2022 21:35:55 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/explanation/</guid>
+      <description>我从2018年左右第一次接触到《What if》，开始就觉得文风风趣幽默，如作者所言“再荒谬的问题都可能有一个科学答案”。后来在科学松鼠会找到</description>
+    </item>
+    
+    <item>
+      <title>挫败</title>
+      <link>https://simonyoungcn.github.io/post/frustration/</link>
+      <pubDate>Sat, 25 Jun 2022 21:22:50 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/frustration/</guid>
+      <description>没想到，高考失利了，和想去的学校失之交臂。 千言万语无法出口，唯有思绪纷飞。 高三一年，熬过无数个夜晚，经历了无数个欢乐或悲伤的瞬间，换来的却是</description>
+    </item>
+    
+    <item>
+      <title>踩坑记录</title>
+      <link>https://simonyoungcn.github.io/post/traps/</link>
+      <pubDate>Tue, 21 Jun 2022 17:55:58 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/traps/</guid>
+      <description>最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃 配置环境 Windows 10 20H2 惠普战66 R5-5625U N</description>
+    </item>
+    
+    <item>
+      <title>新篇章</title>
+      <link>https://simonyoungcn.github.io/post/my-first-post/</link>
+      <pubDate>Mon, 20 Jun 2022 18:38:49 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/my-first-post/</guid>
+      <description>经过7天的不懈努力，终于解决了电脑无线网卡，蓝牙断断续续，vim-plug无法安装，markdownpreview无响应，网站部署失败等问题</description>
+    </item>
+    
+  </channel>
+</rss>
