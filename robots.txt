@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://simonyoungcn.github.io/sitemap.xml
