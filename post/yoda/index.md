@@ -5,7 +5,9 @@
 尤达(Yoda)[^1]可以输出多少功率的原力？
 {{% /admonition %}}
 
-![](https://pic.imgdb.cn/item/62d530b6f54cd3f937279cec.png)
+{{% center %}}
+![3a](https://pic.imgdb.cn/item/62d530b6f54cd3f937279cec.png "尤达在控制风车")
+{{% /center %}}
 
 当然，我在这里就不再赘述前传了。
 
@@ -17,13 +19,19 @@
 
 首先我们需要得知战机的质量。X翼战机的质量从未被规范确定过，但是它有12.5米长。一架F-22战机有19米长，重达19700千克。所以，按比例缩小后，X翼战机的估计重量约为12000磅（或5吨）。
 
-![](https://pic.imgdb.cn/item/62d530b6f54cd3f937279d19.png)
+{{% center %}}
+![3b](https://pic.imgdb.cn/item/62d530b6f54cd3f937279d19.png "X-Wing和F-22图示")
+{{% /center %}}
+
 
 $$m_{x} = m_{f22} \times \left(\frac{12.5}{19}\right)^{3} \approx 5,600\mathrm{kg}$$
 
 下一步，我们需要知道战机被提起来的速度。我重温了一遍那个桥段，给战机露出水面的场景记了个时。
 
-![](https://pic.imgdb.cn/item/62d530b6f54cd3f937279c89.png)
+{{% center %}}
+![3c](https://pic.imgdb.cn/item/62d530b6f54cd3f937279c89.png "看《星战》，做实验")
+{{% /center %}}
+
 
 前着陆支架在大约三秒半的时间内从水里升起，我估测支架应该有1.4米长（通过《星球大战IV：新希望》中一名工作人员挤过去的一幕得出），也就是说X翼战机被抬升的速度为0.39m/s。
 
@@ -35,7 +43,10 @@ $$\frac{5,600 \mathrm{kg} \times 0.9\mathrm{g} \times 1.4 \text{meters}}{3.6 \te
 
 这已经足够为一片市区住宅供能了。输出大小约等于25马力，与电动汽车Smart Car的功率相吻合。
 
-![](https://pic.imgdb.cn/item/62d530b6f54cd3f937279cb6.png)
+{{% center %}}
+![3d](https://pic.imgdb.cn/item/62d530b6f54cd3f937279cb6.png "尤达在Smart电动车引擎盖里")
+{{% /center %}}
+
 
 按照现在[^5]的电价，尤达的价值约为每小时2美元。
 
@@ -46,7 +57,10 @@ $$\frac{5,600 \mathrm{kg} \times 0.9\mathrm{g} \times 1.4 \text{meters}}{3.6 \te
 
 所以看起来尤达是我们最好的能量来源。但是全球电力消耗正向两太瓦逼近，可能要两亿个尤达才能满足我们的需求。综合所有因素，使用尤达的能源可能入不敷出——尽管它***肯定***是绿色清洁的。
 
-![](https://pic.imgdb.cn/item/62d530b6f54cd3f937279ccf.png)
+{{% center %}}
+![3e](https://pic.imgdb.cn/item/62d530b6f54cd3f937279ccf.png "尤达用原力听mp3（我感觉其实是多用电表）")
+{{% /center %}}
+
 
 [^1]:尤达是《星球大战》系列中的虚拟角色，无论声音或布偶演绎，六部曲全由法兰克·欧兹所担任。他具有强大的力量和智慧，与至高的品德。——摘自维基百科
 [^2]:卢克·天行者是一名为乔治·卢卡斯导演的著名科幻电影《星球大战》正传三部曲中的主要人物。由马克·汉米尔饰演。——摘自维基百科

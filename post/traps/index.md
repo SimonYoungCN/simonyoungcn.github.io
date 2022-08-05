@@ -2,7 +2,7 @@
 最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。:smiley: 
 
 {{%admonition type="info" title="配置环境" details="false" %}}
-Windows 10 20H2 惠普战66 R5-5625U
+Windows 10 20H2 惠普战66 R5-5625U (HP ZHAN 66 Pro A 14 inch G5 Notebook PC)
 {{% /admonition %}}
 
 
@@ -93,6 +93,38 @@ Neovim实在用不惯，只用来做笔记算了，积累了小半篇的`markdow
 但我添加之后，系统一直报错，后来在网上查找发现，依据`json`格式文件规定，在这段代码前还应加上一个逗号。
 
 就先写到这里, 以后随时参考，随时补充。
+
+{{%admonition type="info" title="新配置环境" details="false" %}}
+Linux Mint 21 x86_64 linux内核版本 5.15.0-43-generic
+
+惠普战66 R5-5625U (Linux Mint 21 x86_64 linux内核版本 5.15.0-43-generic 惠普战66 R5-5625U)
+{{% /admonition %}}
+
+## 面部识别软件howdy
+正好我的电脑没有指纹识别功能（只有模具），于是看到[这篇文章](https://itsfoss.com/face-unlock-ubuntu/)之后准备大展身手。
+但是在下载的时候提示：
+{{%admonition type="failure" title="终端" details="false" %}}
+```bash
+Downloading 3 required data files...
+Unpacking...
+bzip2: Can't open input file *.bz2: No such file or directory.
+Error while running last command
+dpkg: 处理软件包 howdy (--configure)时出错：
+ 已安装 howdy 软件包 post-installation 脚本 子进程返回错误状态 1
+正在处理用于 man-db (2.9.1-1) 的触发器 ...
+在处理时有错误发生：
+ howdy
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+```
+{{% /admonition %}}
+
+当时我是百思不得解，卸了重装还是报错。于是搜索了一下，发现少了三个文件。[CSDN](https://ask.csdn.net/questions/3273360)和[howdy项目的issue里](https://github.com/boltgolt/howdy/issues/307)都有提到这个问题。
+结果就是有the Great Firewall，网络环境堪忧，文件下载不下来。要去[这里](https://github.com/davisking/dlib-models)把`dlib_face_recognition_resnet_model_v1.dat.bz2`、`mmod_human_face_detector.dat.bz2`和`shape_predictor_5_face_landmarks.dat.bz2`给手动下载下来。
+当然如果网络还是不好，就把整个项目`git clone`下来，再去选对应文件。
+
+把这三个文件下载了之后，首先去新建位于`lib/security/howdy/dlib-data`的文件夹，把那三个压缩包（不要解压）放进去，再执行`sudo apt install howdy`的命令，现在就能顺利下载了。
+
+在Linux上用人脸解锁权限可真舒服，谁用谁知道。
 
 {{%admonition type="quote" title="《孔雀东南飞》" details="false" %}}
 多谢后世人, 诫之慎莫忘。
