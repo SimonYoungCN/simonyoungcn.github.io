@@ -10,21 +10,21 @@
 
 (3)$\displaystyle\int \frac{1}{x} \mathrm{d}x=\ln \lvert x \rvert +C$
 
-(4)$\displaystyle\int \frac{1}{1+x^2} \mathrm{d}x=arctanx+C$
+(4)$\displaystyle\int \frac{1}{1+x^2} \mathrm{d}x=\arctan x+C$
 
-(5)$\displaystyle\int \frac{1}{\sqrt{1-x^2}} \mathrm{d}x=arcsinx+C$
+(5)$\displaystyle\int \frac{1}{\sqrt{1-x^2}} \mathrm{d}x=\arcsin x+C$
 
-(6)$\displaystyle\int cosx \mathrm{d}x=sinx+C$
+(6)$\displaystyle\int \cos x \mathrm{d}x=\sin x+C$
 
-(7)$\displaystyle\int sinx \mathrm{d}x=-cosx+C$
+(7)$\displaystyle\int \sin x \mathrm{d}x=-\cos x+C$
 
-(8)$\displaystyle\int \frac{1}{cos^2x} \mathrm{d}x=\displaystyle\int sec^2x \mathrm{d}x=tanx+C$
+(8)$\displaystyle\int \frac{1}{\cos^2x} \mathrm{d}x=\displaystyle\int \sec^2x \mathrm{d}x=\tan x+C$
 
-(9)$\displaystyle\int \frac{1}{sin^2x} \mathrm{d}x=\displaystyle\int csc^2x \mathrm{d}x=-cotx+C$
+(9)$\displaystyle\int \frac{1}{\sin^2x} \mathrm{d}x=\displaystyle\int \csc^2x \mathrm{d}x=-\cot x+C$
 
-(10)$\displaystyle\int secxtanx \mathrm{d}x=secx+C$
+(10)$\displaystyle\int \sec x\tan x \mathrm{d}x=\sec x+C$
 
-(11)$\displaystyle\int cscxcotx \mathrm{d}x=-cscx+C$
+(11)$\displaystyle\int \csc x\cot x \mathrm{d}x=-\csc x+C$
 
 (12)$\displaystyle\int e^{x} \mathrm{d}x=e^{x}+C$
 
