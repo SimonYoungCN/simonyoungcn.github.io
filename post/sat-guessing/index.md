@@ -42,12 +42,12 @@ $$
 
 祝今年参加SAT的各位考生好运，虽然只凭运气肯定是不行的。:stuck_out_tongue_closed_eyes:
 
-[^1]:SAT，也称 “美国高考” ，是由美国大学理事会（College Board）主办的一项标准化的、以笔试形式进行的高中毕业生学术能力水平考试。其成绩是世界各国高中毕业生申请美国高等教育院校入学资格及奖学金的重要学术能力参考指标。——摘自百度百科
+[^1]: SAT，也称 “美国高考” ，是由美国大学理事会（College Board）主办的一项标准化的、以笔试形式进行的高中毕业生学术能力水平考试。其成绩是世界各国高中毕业生申请美国高等教育院校入学资格及奖学金的重要学术能力参考指标。——摘自百度百科
 
 [^2]: Cooper, Mary Ann, MD. ["Disability, Not Death is the Main Problem with Lightning Injury"](http://www.uic.edu/labs/lightninginjury/Disability.pdf)
 
-[^3]:http://www.nws.noaa.gov/om/hazstats/light08.pdf 
+[^3]: http://www.nws.noaa.gov/om/hazstats/light08.pdf 
 
-[^4]:注二注三的链接均已失效。——译者注
+[^4]: 注二注三的链接均已失效。——译者注
 
 [^5]:《萤火虫》是一部美国科幻电视剧，2002年9月20日于美国和加拿大首播，以传统西部电影为原型，自然主义为设定，剧中大量使用中文，呈献出一部与众不同的科幻戏剧。——摘自维基百科
