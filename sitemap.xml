@@ -3,41 +3,48 @@
   
   <url>
     <loc>https://simonyoungcn.github.io/post/</loc>
-    <lastmod>2023-02-08T15:08:39+08:00</lastmod>
+    <lastmod>2023-02-12T16:41:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://simonyoungcn.github.io/</loc>
-    <lastmod>2023-02-08T15:08:39+08:00</lastmod>
+    <lastmod>2023-02-12T16:41:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://simonyoungcn.github.io/tags/</loc>
-    <lastmod>2023-02-08T15:08:39+08:00</lastmod>
+    <lastmod>2023-02-12T16:41:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://simonyoungcn.github.io/tags/xkcd/</loc>
-    <lastmod>2023-02-08T15:08:39+08:00</lastmod>
+    <lastmod>2023-02-12T16:41:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://simonyoungcn.github.io/post/everybody-out/</loc>
-    <lastmod>2023-02-08T15:08:39+08:00</lastmod>
+    <loc>https://simonyoungcn.github.io/post/everybody-jump/</loc>
+    <lastmod>2023-02-12T16:41:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://simonyoungcn.github.io/tags/%E7%BF%BB%E8%AF%91/</loc>
+    <lastmod>2023-02-12T16:41:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://simonyoungcn.github.io/post/everybody-out/</loc>
     <lastmod>2023-02-08T15:08:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
