@@ -1,9 +1,11 @@
 
-> 原文地址：https://what-if.xkcd.com/6/
+
 
 {{%admonition type="quote" title="Vittorio Iacovella" details="false" %}}
 如果玻璃杯里的一杯水变成真正意义上的半空，会发生什么？
 {{% /admonition %}}
+
+<!--more-->
 
 悲观主义者对于即将发生的事情的反应可能比乐观主义者更正确一点。
 
@@ -137,3 +139,5 @@
 {{% center %}}
 ![6q](https://pic.imgdb.cn/item/63bd481abe43e0d30ecff6db.jpg "乐观主义者倒水喝~")
 {{% /center %}}
+
+> 原文地址：https://what-if.xkcd.com/6/

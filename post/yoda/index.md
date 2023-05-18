@@ -1,9 +1,11 @@
 
->原文地址：https://what-if.xkcd.com/3/
+
 
 {{%admonition type="quote" title="Ryan Finnie" details="false" %}}
 尤达(Yoda)[^1]可以输出多少功率的原力？
 {{% /admonition %}}
+
+<!--more-->
 
 {{% center %}}
 ![3a](https://pic.imgdb.cn/item/62d530b6f54cd3f937279cec.png "尤达在控制风车")
@@ -60,6 +62,8 @@ $$\frac{5,600 \mathrm{kg} \times 0.9\mathrm{g} \times 1.4 \text{meters}}{3.6 \te
 {{% center %}}
 ![3e](https://pic.imgdb.cn/item/62d530b6f54cd3f937279ccf.png "尤达用原力听mp3（我感觉其实是多用电表）")
 {{% /center %}}
+
+>原文地址：https://what-if.xkcd.com/3/
 
 
 [^1]:尤达是《星球大战》系列中的虚拟角色，无论声音或布偶演绎，六部曲全由法兰克·欧兹所担任。他具有强大的力量和智慧，与至高的品德。——摘自维基百科

@@ -1,8 +1,7 @@
->原文地址：https://what-if.xkcd.com/2/
-
 {{%admonition type="quote" title="Rob Balder" details="false" %}}
 如果每个SAT[^1]考生做多选题时都乱猜一气会发生什么？会有多少个满分呢？
 {{% /admonition %}}
+<!--more-->
 
 一个也没有。
 
@@ -41,6 +40,9 @@ $$
 除了Alan Tudyk和Ron Glass之外其余人都活了下来。
 
 祝今年参加SAT的各位考生好运，虽然只凭运气肯定是不行的。:stuck_out_tongue_closed_eyes:
+
+>原文地址：https://what-if.xkcd.com/2/
+
 
 [^1]: SAT，也称 “美国高考” ，是由美国大学理事会（College Board）主办的一项标准化的、以笔试形式进行的高中毕业生学术能力水平考试。其成绩是世界各国高中毕业生申请美国高等教育院校入学资格及奖学金的重要学术能力参考指标。——摘自百度百科
 

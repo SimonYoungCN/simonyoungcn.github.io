@@ -1,9 +1,11 @@
 
-> 原文地址：https://what-if.xkcd.com/8/
+
 
 {{%admonition type="quote" title="Thomas Bennett（和很多人）" details="false" %}}
 如果地球上所有人都站得足够近然后跳起来，在同一瞬间同时落地会发生什么？
 {{% /admonition %}}
+
+<!--more-->
 
 这个问题算是在what-if博客上提问数量最多的问题之一了。
 其实之前[有人](http://scienceblogs.com/dotphysics/2010/08/26/what-if-everyone-jumped/)已经验算过了。
@@ -104,3 +106,5 @@
 {{% center %}}
 ![8h](https://pic.imgdb.cn/item/63eccf06f144a010073e4518.png "地球")
 {{% /center %}}
+
+> 原文地址：https://what-if.xkcd.com/8/

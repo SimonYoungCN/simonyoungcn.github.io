@@ -1,5 +1,7 @@
 
-最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。:smiley: 
+最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。:smiley:
+
+<!--more-->
 
 {{%admonition type="info" title="配置环境" details="false" %}}
 Windows 10 20H2 惠普战66 R5-5625U (HP ZHAN 66 Pro A 14 inch G5 Notebook PC)
@@ -97,7 +99,7 @@ Neovim实在用不惯，只用来做笔记算了，积累了小半篇的`markdow
 {{%admonition type="info" title="新配置环境" details="false" %}}
 Linux Mint 21 x86_64 linux内核版本 5.15.0-43-generic
 
-惠普战66 R5-5625U (Linux Mint 21 x86_64 linux内核版本 5.15.0-43-generic 惠普战66 R5-5625U)
+惠普战66 R5-5625U
 {{% /admonition %}}
 
 ## 面部识别软件howdy
@@ -130,7 +132,8 @@ E: Sub-process /usr/bin/dpkg returned an error code (1)
 多谢后世人, 诫之慎莫忘。
 {{% /admonition %}}
 
-后记：过了一个多月，我终于等到了Linux Mint 21的镜像，虽说是beta版，但是至少高通的网卡能识别了。想起我刚拿到电脑时兴致勃勃地安装了Linux Mint 20.3以后才发现根本识别不了网卡，然而Windows系统在我全局安装时又被我删了，所以……
+## 后记
+过了一个多月，我终于等到了Linux Mint 21的镜像，虽说是beta版，但是至少高通的网卡能识别了。想起我刚拿到电脑时兴致勃勃地安装了Linux Mint 20.3以后才发现根本识别不了网卡，然而Windows系统在我全局安装时又被我删了，所以……
 
 现在也在逐步开始适应neovim，花了一天的时间配置，效果还不错，可能之后也会坚持着用吧，毕竟我还是比较喜欢专注于一个软件，自己写的snippets不舍得就此放弃。还好，自己也慢慢地攻克了难关，markdownpreview的附加依赖下载时不会更新进度，就让它安静地下载。
 中文符号输入不正确的bug还没有找到，不过大概率是某一个插件引起的，neovim还是空壳的时候，输入中文并没有任何问题，不过我还是利用利用snippets把这个bug尽量弥补了，比如我按中文分号`；`就会跳出来`¼<xCSI>`这玩意儿。所以我直接把那堆乱码设成了中文分号的触发键。后续打算再排查一下，也希望了解这种情况的人能够留言告诉缘由，不尽感激。

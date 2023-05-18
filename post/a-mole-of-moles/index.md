@@ -1,9 +1,11 @@
 
-> 原文地址：https://what-if.xkcd.com/4/
+
 
 {{%admonition type="quote" title="Sean Rice" details="false" %}}
 如果你把一摩尔鼹鼠[^1]放在某个地方会发生什么？
 {{% /admonition %}}
+
+<!--more-->
 
 事情会变得有点恐怖。
 
@@ -109,6 +111,8 @@ $4.52 \times 10^{22}$的立方根是3562千米，这意味着半径为2210千米
 {{% center %}}
 ![4f](https://pic.imgdb.cn/item/62ea086d16f2c2beb1f1aa14.png)
 {{% /center %}}
+
+> 原文地址：https://what-if.xkcd.com/4/
 
 [^1]: 英语里“摩尔”与“鼹鼠”是一个单词。——译者注
 [^2]: 2012年——译者注
