@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.115.2 with theme even" />
 
 
 <link rel="canonical" href="https://simonyoungcn.github.io/post/traps/" />
@@ -46,7 +46,6 @@
 <meta property="og:url" content="https://simonyoungcn.github.io/post/traps/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-21T17:55:58+08:00" />
 <meta property="article:modified_time" content="2022-06-21T17:55:58+08:00" />
-
 <meta itemprop="name" content="踩坑记录">
 <meta itemprop="description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃"><meta itemprop="datePublished" content="2022-06-21T17:55:58+08:00" />
 <meta itemprop="dateModified" content="2022-06-21T17:55:58+08:00" />
@@ -198,9 +197,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Error: fatal: No url found <span class="k">for</span> submodule path <span class="s1">&#39;lib/mathjax&#39;</span> in .gitmodules
-Error: The process <span class="s1">&#39;/usr/bin/git&#39;</span> failed with <span class="nb">exit</span> code <span class="m">128</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Error: fatal: No url found <span class="k">for</span> submodule path <span class="s1">&#39;lib/mathjax&#39;</span> in .gitmodules
+</span></span><span class="line"><span class="cl">Error: The process <span class="s1">&#39;/usr/bin/git&#39;</span> failed with <span class="nb">exit</span> code <span class="m">128</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
 <p>后面上网查了一下，发现是<code>mathjax</code>文件夹里还有隐藏的<code>.git</code>文件，需要执行如下命令将其删除<a href="(https://www.jianshu.com/p/7cc6ea70e48e)" title="简书">1</a>：</p>
@@ -212,11 +211,11 @@ Error: The process <span class="s1">&#39;/usr/bin/git&#39;</span> failed with <s
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ git rm --cached
-$ git add .
-$ git commit -m <span class="s2">&#34;commit messge&#34;</span>
-$ git push origin <span class="o">[</span>branch_name<span class="o">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ git rm --cached
+</span></span><span class="line"><span class="cl">$ git add .
+</span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;commit messge&#34;</span>
+</span></span><span class="line"><span class="cl">$ git push origin <span class="o">[</span>branch_name<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="部署到github-pages">部署到GitHub Pages</h3>
 <p>目前GitHub已经默认主分支名称为<code>main</code>，但大部分教程仍旧是<code>master</code>，相关改动可以参考<a href="https://zhuanlan.zhihu.com/p/57361697">这里</a>的评论区。反正我<code>push</code>时<code>main</code>分支一直报错，于是我先push到<code>master</code>，然后把<code>main</code>给删了，简单粗暴。😆</p>
@@ -250,18 +249,18 @@ $ git push origin <span class="o">[</span>branch_name<span class="o">]</span>
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;[markdown]&#34;</span><span class="err">:</span> <span class="p">{</span>
-        <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;editor.renderWhitespace&#34;</span><span class="p">:</span> <span class="s2">&#34;all&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;editor.quickSuggestions&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;other&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&#34;comments&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nt">&#34;strings&#34;</span><span class="p">:</span> <span class="kc">true</span>
-        <span class="p">},</span>
-     
-          <span class="nt">&#34;editor.acceptSuggestionOnEnter&#34;</span><span class="p">:</span> <span class="s2">&#34;on&#34;</span>
-    <span class="p">}</span><span class="err">,</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;[markdown]&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.renderWhitespace&#34;</span><span class="p">:</span> <span class="s2">&#34;all&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.quickSuggestions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;other&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;comments&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;strings&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;editor.acceptSuggestionOnEnter&#34;</span><span class="p">:</span> <span class="s2">&#34;on&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>但我添加之后，系统一直报错，后来在网上查找发现，依据<code>json</code>格式文件规定，在这段代码前还应加上一个逗号。</p>
 <p>就先写到这里, 以后随时参考，随时补充。</p>
@@ -287,17 +286,17 @@ $ git push origin <span class="o">[</span>branch_name<span class="o">]</span>
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Downloading <span class="m">3</span> required data files...
-Unpacking...
-bzip2: Can<span class="err">&#39;</span>t open input file *.bz2: No such file or directory.
-Error <span class="k">while</span> running last <span class="nb">command</span>
-dpkg: 处理软件包 howdy <span class="o">(</span>--configure<span class="o">)</span>时出错：
- 已安装 howdy 软件包 post-installation 脚本 子进程返回错误状态 <span class="m">1</span>
-正在处理用于 man-db <span class="o">(</span>2.9.1-1<span class="o">)</span> 的触发器 ...
-在处理时有错误发生：
- howdy
-E: Sub-process /usr/bin/dpkg returned an error code <span class="o">(</span>1<span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Downloading <span class="m">3</span> required data files...
+</span></span><span class="line"><span class="cl">Unpacking...
+</span></span><span class="line"><span class="cl">bzip2: Can<span class="err">&#39;</span>t open input file *.bz2: No such file or directory.
+</span></span><span class="line"><span class="cl">Error <span class="k">while</span> running last <span class="nb">command</span>
+</span></span><span class="line"><span class="cl">dpkg: 处理软件包 howdy <span class="o">(</span>--configure<span class="o">)</span>时出错：
+</span></span><span class="line"><span class="cl"> 已安装 howdy 软件包 post-installation 脚本 子进程返回错误状态 <span class="m">1</span>
+</span></span><span class="line"><span class="cl">正在处理用于 man-db <span class="o">(</span>2.9.1-1<span class="o">)</span> 的触发器 ...
+</span></span><span class="line"><span class="cl">在处理时有错误发生：
+</span></span><span class="line"><span class="cl"> howdy
+</span></span><span class="line"><span class="cl">E: Sub-process /usr/bin/dpkg returned an error code <span class="o">(</span>1<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
 <p>当时我是百思不得解，卸了重装还是报错。于是搜索了一下，发现少了三个文件。<a href="https://ask.csdn.net/questions/3273360">CSDN</a>和<a href="https://github.com/boltgolt/howdy/issues/307">howdy项目的issue里</a>都有提到这个问题。
@@ -428,7 +427,7 @@ E: Sub-process /usr/bin/dpkg returned an error code <span class="o">(</span>1<sp
 
 
 
-<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
   <script type="text/javascript">
     window.MathJax = {
       tex: {
