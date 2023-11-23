@@ -49,7 +49,7 @@
 <meta itemprop="name" content="踩坑记录">
 <meta itemprop="description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃"><meta itemprop="datePublished" content="2022-06-21T17:55:58+08:00" />
 <meta itemprop="dateModified" content="2022-06-21T17:55:58+08:00" />
-<meta itemprop="wordCount" content="3058">
+<meta itemprop="wordCount" content="3427">
 <meta itemprop="keywords" content="技术," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="踩坑记录"/>
 <meta name="twitter:description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃"/>
@@ -130,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2022-06-21 </span>
         
-          <span class="more-meta"> 约 3058 字 </span>
+          <span class="more-meta"> 约 3427 字 </span>
           <span class="more-meta"> 预计阅读 7 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -164,6 +164,7 @@
         </li>
         <li><a href="#面部识别软件howdy">面部识别软件howdy</a></li>
         <li><a href="#后记">后记</a></li>
+        <li><a href="#后后记">后后记</a></li>
       </ul>
     </li>
   </ul>
@@ -312,6 +313,31 @@
 <p>现在也在逐步开始适应neovim，花了一天的时间配置，效果还不错，可能之后也会坚持着用吧，毕竟我还是比较喜欢专注于一个软件，自己写的snippets不舍得就此放弃。还好，自己也慢慢地攻克了难关，markdownpreview的附加依赖下载时不会更新进度，就让它安静地下载。
 中文符号输入不正确的bug还没有找到，不过大概率是某一个插件引起的，neovim还是空壳的时候，输入中文并没有任何问题，不过我还是利用利用snippets把这个bug尽量弥补了，比如我按中文分号<code>；</code>就会跳出来<code>¼&lt;xCSI&gt;</code>这玩意儿。所以我直接把那堆乱码设成了中文分号的触发键。后续打算再排查一下，也希望了解这种情况的人能够留言告诉缘由，不尽感激。
 还有一个比较奇怪的点，我在Windows上没有遇到，但是在Linux上遇到了的问题是明明好看的主题应用之后变得十分难看，还以为这是Linux系统特点。后面偶然看见讨论说还要<code>set termguicolors</code>，之后果然熟悉的配色又回来了。</p>
+<h2 id="后后记">后后记</h2>
+<p>我终于找到neovim输入部分中文符号跳出乱码的原因了。原因就是我在配置文件<code>init.vim</code>的autopairs插件配置语句里想当然加了中文的括号自动补全……</p>
+<div class="admonition failure"><p class="admonition-title">错误</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">AutoPairs</span> <span class="p">=</span> {<span class="s1">&#39;(&#39;</span>:<span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;[&#39;</span>:<span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="s1">&#39;{&#39;</span>:<span class="s1">&#39;}&#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span>:<span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span>:<span class="s1">&#39;&#34;&#39;</span><span class="p">,</span><span class="s2">&#34;（&#34;</span><span class="p">,</span><span class="s2">&#34;）&#34;</span>}<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>要不是那一瞬间的报错我还真就不知道哪里出了问题，足足有一年之久了。</p>
+<p>应改为：</p>
+<div class="admonition success"><p class="admonition-title">正确</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">AutoPairs</span> <span class="p">=</span> {<span class="s1">&#39;(&#39;</span>:<span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;[&#39;</span>:<span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="s1">&#39;{&#39;</span>:<span class="s1">&#39;}&#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span>:<span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span>:<span class="s1">&#39;&#34;&#39;</span>}<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>另外，现在感觉自己与编程这一事物渐行渐远，于是干脆抛弃了neovim，转而全心全意使用vscode。目前发现了Typst这一新鲜事物，准备入坑，就这样。</p>
 <p>道阻且长，继续努力吧。😃</p>
 <p>贴一张screenshot：</p>
 <p><img src="https://pic.imgdb.cn/item/62e7535b8c61dc3b8ea30d72.png" alt="screenshot" title="还行吧？"></p>
