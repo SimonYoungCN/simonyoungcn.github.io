@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Simon Young" /><meta name="description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃
+<meta name="author" content="Simon Young" /><meta name="description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。&amp;#x1f603;
 " /><meta name="keywords" content="code, xkcd, math, 技术, 数学, 翻译" />
 
 
@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.115.2 with theme even" />
+<meta name="generator" content="Hugo 0.122.0 with theme even" />
 
 
 <link rel="canonical" href="https://simonyoungcn.github.io/post/traps/" />
@@ -41,18 +41,18 @@
 
 
 <meta property="og:title" content="踩坑记录" />
-<meta property="og:description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃" />
+<meta property="og:description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。&#x1f603;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://simonyoungcn.github.io/post/traps/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2022-06-21T17:55:58+08:00" />
 <meta property="article:modified_time" content="2022-06-21T17:55:58+08:00" />
+
 <meta itemprop="name" content="踩坑记录">
-<meta itemprop="description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃"><meta itemprop="datePublished" content="2022-06-21T17:55:58+08:00" />
+<meta itemprop="description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。&#x1f603;"><meta itemprop="datePublished" content="2022-06-21T17:55:58+08:00" />
 <meta itemprop="dateModified" content="2022-06-21T17:55:58+08:00" />
-<meta itemprop="wordCount" content="3427">
-<meta itemprop="keywords" content="技术," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="踩坑记录"/>
-<meta name="twitter:description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃"/>
+<meta itemprop="wordCount" content="3467">
+<meta itemprop="keywords" content="技术," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="踩坑记录"/>
+<meta name="twitter:description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。&#x1f603;"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2022-06-21 </span>
         
-          <span class="more-meta"> 约 3427 字 </span>
+          <span class="more-meta"> 约 3467 字 </span>
           <span class="more-meta"> 预计阅读 7 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -172,7 +172,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃</p>
+      <p>最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。&#x1f603;</p>
 <div class="admonition info"><p class="admonition-title">配置环境</p>
 <p>Windows 10 20H2 惠普战66 R5-5625U (HP ZHAN 66 Pro A 14 inch G5 Notebook PC)</p>
 </div>
@@ -180,7 +180,7 @@
 <h3 id="initvim">init.vim</h3>
 <p>Neovim插件配置文件即为<code>init.vim</code>，安装和配置插件都在这里实现。一般是在<code>call begin()</code>和<code>call end()</code>之间加入自己需要安装的插件，然后再在最后添加<code>let g:</code>等配置信息。说白了Neovim的配置都在这个文件里部署, 例如设置鼠标控制光标等。不知道是系统的原因还是什么，我只能把<code>init.vim</code>放在<code>C:\Users\simon\AppData\Local\nvim</code>里而把存放插件的地方设置为<code>C:\Users\simon\.AppData\local\nvim\plugged</code>里。放在其他地方就会报错。</p>
 <p><img src="https://pic.imgdb.cn/item/62b263a809475431298d05d8.png" alt="看这图看了一天…… " title="看这图看了一天……"></p>
-<p>另外, 我似乎还不知道Windows 10 系统下如何打通与Neovim的剪贴板，希望知道的人能够慷慨留言告诉我一下。😉</p>
+<p>另外, 我似乎还不知道Windows 10 系统下如何打通与Neovim的剪贴板，希望知道的人能够慷慨留言告诉我一下。&#x1f609;</p>
 <h3 id="usnippets">Usnippets</h3>
 <p>这确实是个好东西。但是它需要配合<code>vim-snippet</code>使用，否则就只是一具空壳而已。</p>
 <h3 id="markdownpreview">MarkdownPreview</h3>
@@ -219,15 +219,15 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="部署到github-pages">部署到GitHub Pages</h3>
-<p>目前GitHub已经默认主分支名称为<code>main</code>，但大部分教程仍旧是<code>master</code>，相关改动可以参考<a href="https://zhuanlan.zhihu.com/p/57361697">这里</a>的评论区。反正我<code>push</code>时<code>main</code>分支一直报错，于是我先push到<code>master</code>，然后把<code>main</code>给删了，简单粗暴。😆</p>
+<p>目前GitHub已经默认主分支名称为<code>main</code>，但大部分教程仍旧是<code>master</code>，相关改动可以参考<a href="https://zhuanlan.zhihu.com/p/57361697">这里</a>的评论区。反正我<code>push</code>时<code>main</code>分支一直报错，于是我先push到<code>master</code>，然后把<code>main</code>给删了，简单粗暴。&#x1f606;</p>
 <h3 id="评论utterances">评论(Utterances)</h3>
 <p>另建一个<code>repo</code>，用于存放<code>issue</code>形式的评论。</p>
 <div class="admonition warning"><p class="admonition-title">注意</p>
 <p>Hugo的配置文档里第一行<code>baseURL</code>不能加<code>www.</code>的前缀，只能是<code>https://[YOUR_GITHUB_ID].github.io</code>。另外, 配置文件里的<code>repo</code>只用填写自己的repo名，不用加用户名。</p>
 </div>
-<p>为了这一问题我甚至还去Utterances里死皮赖脸提了个issue…… 😂</p>
+<p>为了这一问题我甚至还去Utterances里死皮赖脸提了个issue…… &#x1f602;</p>
 <h2 id="vs-code">VS Code</h2>
-<p>Neovim实在用不惯，只用来做笔记算了，积累了小半篇的<code>markdown.snippet</code>，做笔记的速度还是蛮快的。😃只不过各方面都没有VSCode好用：中文逗号、冒号等打不出来；不能复制粘贴；功能不强大。
+<p>Neovim实在用不惯，只用来做笔记算了，积累了小半篇的<code>markdown.snippet</code>，做笔记的速度还是蛮快的。&#x1f603;只不过各方面都没有VSCode好用：中文逗号、冒号等打不出来；不能复制粘贴；功能不强大。
 曾经看到过知乎上抖机灵的回答，说(Neo)vim是军刀，IDE是航母。不可否认，vim系列的编辑器优点多多，比如对系统配置要求低，运行速度快，可键盘控制。但个人认为，军刀安装再多插件，装备再丰富，终究不敌航母。写东西是为了方便快捷，而不是去习惯畸形的操作方式。只有自己用起来最顺手的东西才是最好的。</p>
 <p>用VSCode其实还挺方便的，就比如复制粘贴，可以大大提高我的效率(doge)。</p>
 <div class="admonition warning"><p class="admonition-title">注意</p>
@@ -321,8 +321,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">AutoPairs</span> <span class="p">=</span> {<span class="s1">&#39;(&#39;</span>:<span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;[&#39;</span>:<span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="s1">&#39;{&#39;</span>:<span class="s1">&#39;}&#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span>:<span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span>:<span class="s1">&#39;&#34;&#39;</span><span class="p">,</span><span class="s2">&#34;（&#34;</span><span class="p">,</span><span class="s2">&#34;）&#34;</span>}<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">AutoPairs</span> <span class="p">=</span> {<span class="s1">&#39;(&#39;</span>:<span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;[&#39;</span>:<span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="s1">&#39;{&#39;</span>:<span class="s1">&#39;}&#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span>:<span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span>:<span class="s1">&#39;&#34;&#39;</span><span class="p">,</span><span class="s2">&#34;（&#34;</span><span class="p">,</span><span class="s2">&#34;）&#34;</span>}
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
 <p>要不是那一瞬间的报错我还真就不知道哪里出了问题，足足有一年之久了。</p>
@@ -333,12 +333,12 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">AutoPairs</span> <span class="p">=</span> {<span class="s1">&#39;(&#39;</span>:<span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;[&#39;</span>:<span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="s1">&#39;{&#39;</span>:<span class="s1">&#39;}&#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span>:<span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span>:<span class="s1">&#39;&#34;&#39;</span>}<span class="err">
-</span></span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">AutoPairs</span> <span class="p">=</span> {<span class="s1">&#39;(&#39;</span>:<span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;[&#39;</span>:<span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="s1">&#39;{&#39;</span>:<span class="s1">&#39;}&#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span>:<span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span>:<span class="s1">&#39;&#34;&#39;</span>}
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
 <p>另外，现在感觉自己与编程这一事物渐行渐远，于是干脆抛弃了neovim，转而全心全意使用vscode。目前发现了Typst这一新鲜事物，准备入坑，就这样。</p>
-<p>道阻且长，继续努力吧。😃</p>
+<p>道阻且长，继续努力吧。&#x1f603;</p>
 <p>贴一张screenshot：</p>
 <p><img src="https://pic.imgdb.cn/item/62e7535b8c61dc3b8ea30d72.png" alt="screenshot" title="还行吧？"></p>
     </div>
@@ -437,7 +437,7 @@
   <span class="copyright-year">
     &copy; 
     2022 - 
-    2023<span class="heart"><i class="iconfont icon-heart"></i></span><span>Simon Young</span>
+    2024<span class="heart"><i class="iconfont icon-heart"></i></span><span>Simon Young</span>
   </span>
 </div>
     </footer>
@@ -464,7 +464,7 @@
   <script type="text/javascript" async src="/lib/mathjax/es5/tex-mml-chtml.js"></script>
 
 
-<script type="application/javascript">
+<script>
 var doNotTrack = false;
 if (!doNotTrack) {
 	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
