@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="Simon Young" /><meta name="description" content="之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……
-" /><meta name="keywords" content="code, xkcd, math, 技术, 数学, 翻译" />
+" /><meta name="keywords" content="code, xkcd, math, language, 技术, 数学, 翻译, 语言" />
 
 
 
@@ -50,7 +50,7 @@
 <meta itemprop="name" content="Rime × 98 五笔">
 <meta itemprop="description" content="之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……"><meta itemprop="datePublished" content="2023-10-28T09:05:26+08:00" />
 <meta itemprop="dateModified" content="2023-10-28T09:05:26+08:00" />
-<meta itemprop="wordCount" content="1177">
+<meta itemprop="wordCount" content="1350">
 <meta itemprop="keywords" content="技术," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Rime × 98 五笔"/>
 <meta name="twitter:description" content="之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……"/>
 
@@ -130,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2023-10-28 </span>
         
-          <span class="more-meta"> 约 1177 字 </span>
+          <span class="more-meta"> 约 1350 字 </span>
           <span class="more-meta"> 预计阅读 3 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -358,6 +358,127 @@
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div></details>
+<hr>
+<p>后续：自己根据原有的皮肤改造了下，贴在这里，效果见下图。</p>
+<p><img src="https://pic.imgdb.cn/item/66378ef40ea9cb14037d8033.png" alt="1"></p>
+<details class="admonition info"><summary class="admonition-title">Win 10</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Win10</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xf0f0f0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Win10&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">font_point</span><span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_width</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_height</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_x</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_y</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_padding</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">round_corner</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<div class='align-center'>
+<p><img src="https://pic.imgdb.cn/item/66378ef40ea9cb14037d8033.png" alt="1" title="Win 10"></p>
+</div>
+<details class="admonition info"><summary class="admonition-title">Win10_Dark</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Win10_dark</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x333333</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x333333</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Win10dark&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">font_point</span><span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_width</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_height</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_x</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_y</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_padding</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">round_corner</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<div class='align-center'>
+<p><img src="https://pic.imgdb.cn/item/66378ef40ea9cb14037d8026.png" alt="2" title="Win10_Dark"></p>
+</div>
 <div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -398,7 +519,10 @@
         <img class="image" src="https://pic.imgdb.cn/item/62b0833f09475431295a881f.jpgB">
         <span>微信打赏</span>
       </label>
-    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://img.qovv.cn/2024/05/12/66401d6ba73a7.png">
+        <span>支付宝打赏</span>
+      </label>
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
