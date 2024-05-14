@@ -50,7 +50,7 @@
 <meta itemprop="name" content="微机原理与接口技术知识总结">
 <meta itemprop="description" content="本文按吉林大学考纲编写，仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"><meta itemprop="datePublished" content="2024-05-12T09:21:47+08:00" />
 <meta itemprop="dateModified" content="2024-05-12T09:21:47+08:00" />
-<meta itemprop="wordCount" content="5699">
+<meta itemprop="wordCount" content="5637">
 <meta itemprop="keywords" content="技术,汇编语言," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="微机原理与接口技术知识总结"/>
 <meta name="twitter:description" content="本文按吉林大学考纲编写，仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"/>
 
@@ -130,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2024-05-12 </span>
         
-          <span class="more-meta"> 约 5699 字 </span>
+          <span class="more-meta"> 约 5637 字 </span>
           <span class="more-meta"> 预计阅读 12 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -275,10 +275,10 @@
 <p>8088 CPU 有 $20$ 根地址线，可寻址 $2^{20}=1 \rm{MB}$ 内存空间，地址范围为 $00000\rm{H} \sim \rm{FFFFFH}$。每个存储单元对应一个 $20$ 位的地址（物理地址），每个存储单元物理地址唯一。</p>
 <h3 id="存储器分段管理">存储器分段管理</h3>
 <div class="admonition question"><p class="admonition-title">为什么存储器要分段？</p>
-<p>因为8088 CPU 内部寄存器的宽度为$16$位，只能存放$16$位的二进制数据，而$16$位的寄存器无法存放$20$位的存储单元物理地址，所以对存储器采用分段式管理。</p>
+<p>因为 8088 CPU 内部寄存器的宽度为 $16$ 位，只能存放 $16$ 位的二进制数据，而 $16$ 位的寄存器无法存放$20$位的存储单元物理地址，所以对存储器采用分段式管理。</p>
 </div>
 <div class="admonition question"><p class="admonition-title">如何给存储器分段？</p>
-<p>8088 CPU 将可直接寻址的 $1 \rm{MB}$ 内存窨划分成一些连续的区域，称为段。每段的长度最大为 $64 \rm{KB}$，并要求段的起始地址必须能被 $16$ 整除，形式如 $\rm{XXXX0H}$。这种形式的地址最低 $4$ 位二进制数为 $0000\rm{B}$，所以只要存储高 $16$ 位就可以据此得到它的 $20$ 位物理地址。</p>
+<p>8088 CPU 将可直接寻址的 $1 \rm{MB}$ 内存空间划分成一些连续的区域，称为段。每段的长度最大为 $64 \rm{KB}$，并要求段的起始地址必须能被 $16$ 整除，形式如 $\rm{XXXX0H}$ 。这种形式的地址最低 $4$ 位二进制数为 $0000\rm{B}$ ，所以只要存储高 $16$ 位就可以据此得到它的 $20$ 位物理地址。</p>
 </div>
 <p>逻辑地址：$\rm{XXXXH:YYYYH}$ 。其中$\rm{XXXXH}$为段基址，$\rm{YYYYH}$为段内偏移地址。</p>
 <p>$$
@@ -594,15 +594,15 @@ $$</p>
 <h4 id="类型-2">类型 $2$</h4>
 <p>非屏蔽中断，该中断不能被软件禁止。该中断由 CPU 之外的硬件产生，通过 CPU 的 $\rm{NMI}$ 引脚输入中断请求信号，上升沿触发。</p>
 <h4 id="类型-3">类型 $3$</h4>
-<p>断点中断，由一个单字节指令 $\rm{INT3}$ 引起的中断，指令代码为 <code>0CCH</code>。</p>
+<p>断点中断，由一个单字节指令 <code>INT3</code> 引起的中断，指令代码为 <code>0CCH</code>。</p>
 <h4 id="类型-4">类型 $4$</h4>
-<p>溢出中断，$\rm{INTO}$指令的专用向量。若 <code>OF</code>标志位为 <code>1</code>则中断，否则不执行任何操作。</p>
+<p>溢出中断，<code>INTO</code>$指令的专用向量。若 <code>OF</code>标志位为 <code>1</code>则中断，否则不执行任何操作。</p>
 <h3 id="硬件中断">硬件中断</h3>
 <p>8086/8088 有两个硬件中断请求信号输入引脚：$\rm{NMI}$ 和 $\rm{INTR}$，用来接收外部中断源产生的中断请求。前者接收非屏蔽中断请求，后者接收可屏蔽中断请求。</p>
 <h4 id="非屏蔽中断">非屏蔽中断</h4>
-<p>非屏蔽中断，该中断不能被软件禁止。该中断由 CPU 之外的硬件产生，$\rm{NMI}$ 采用上升沿触发，优先级高于可屏蔽中断。CPU 响应该中断时，将所有内部寄存器存于使用电池的备份存储器或 $\rm{EEPROM}$中。该中断用于处理紧急事件。</p>
+<p>非屏蔽中断，该中断不能被软件禁止。该中断由 CPU 之外的硬件产生，$\rm{NMI}$ 采用上升沿触发，优先级高于可屏蔽中断。CPU 响应该中断时，将所有内部寄存器存于使用电池的备份存储器或 EEPROM 中。该中断用于处理紧急事件。</p>
 <h4 id="可屏蔽中断">可屏蔽中断</h4>
-<p>$\rm{INTR}$采用电平触发方式，高电平有效。$\rm{INTR}$ 由外部中断源置位，并在中断服务程序内部被清除。CPU 收到中断请求信号后，检测中断允许标志位 <code>IF</code>，若 <code>IF</code> $= 1$，CPU 响应 $\rm{INTR}$ 请求；若 <code>IF</code> $= 0$, CPU 屏蔽 $\rm{INTR}$ 请求。被屏蔽的中断请求信号可一直保持高电平，直到被 CPU 接收。可屏蔽中断的优先级低于非屏蔽中断。中断允许标志位 <code>IF</code> 可以用指令 <code>STI</code> 和 <code>CLI</code> 进行设置。</p>
+<p>$\rm{INTR}$ 采用电平触发方式，高电平有效。$\rm{INTR}$ 由外部中断源置位，并在中断服务程序内部被清除。CPU 收到中断请求信号后，检测中断允许标志位 <code>IF</code>，若 <code>IF</code> $= 1$，CPU 响应 $\rm{INTR}$ 请求；若 <code>IF</code> $= 0$, CPU 屏蔽 $\rm{INTR}$ 请求。被屏蔽的中断请求信号可一直保持高电平，直到被 CPU 接收。可屏蔽中断的优先级低于非屏蔽中断。中断允许标志位 <code>IF</code> 可以用指令 <code>STI</code> 和 <code>CLI</code> 进行设置。</p>
 <p>CPU 响应 $\rm{INTR}$ 请求时，启动中断响应总线周期，发中断应答信号 $\rm{\overline{INTA}}$ 。系统连续产生 $2$ 个 $\rm{\overline{INTA}}$ 脉冲，用于从数据总线接收中断控制器送出的中断类型码。</p>
 <h1 id="可编程接口芯片">可编程接口芯片</h1>
 <h2 id="8255a-控制步进电机">8255A 控制步进电机</h2>
