@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Simon Young" /><meta name="description" content="本文按吉林大学考纲编写，仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。
+<meta name="author" content="Simon Young" /><meta name="description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。
 " /><meta name="keywords" content="code, xkcd, math, language, 技术, 数学, 翻译, 语言" />
 
 
@@ -41,18 +41,18 @@
 
 
 <meta property="og:title" content="微机原理与接口技术知识总结" />
-<meta property="og:description" content="本文按吉林大学考纲编写，仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。" />
+<meta property="og:description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://simonyoungcn.github.io/post/microcomputer/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2024-05-12T09:21:47+08:00" />
 <meta property="article:modified_time" content="2024-05-12T09:21:47+08:00" />
 
 <meta itemprop="name" content="微机原理与接口技术知识总结">
-<meta itemprop="description" content="本文按吉林大学考纲编写，仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"><meta itemprop="datePublished" content="2024-05-12T09:21:47+08:00" />
+<meta itemprop="description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"><meta itemprop="datePublished" content="2024-05-12T09:21:47+08:00" />
 <meta itemprop="dateModified" content="2024-05-12T09:21:47+08:00" />
-<meta itemprop="wordCount" content="5635">
+<meta itemprop="wordCount" content="5632">
 <meta itemprop="keywords" content="技术,汇编语言," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="微机原理与接口技术知识总结"/>
-<meta name="twitter:description" content="本文按吉林大学考纲编写，仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"/>
+<meta name="twitter:description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2024-05-12 </span>
         
-          <span class="more-meta"> 约 5635 字 </span>
+          <span class="more-meta"> 约 5632 字 </span>
           <span class="more-meta"> 预计阅读 12 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -151,8 +151,8 @@
       <ul>
         <li><a href="#功能结构">功能结构</a>
           <ul>
-            <li><a href="#执行单元">执行单元</a></li>
-            <li><a href="#总线接口单元">总线接口单元</a></li>
+            <li><a href="#执行单元-eu">执行单元 (EU)</a></li>
+            <li><a href="#总线接口单元-biu">总线接口单元 (BIU)</a></li>
           </ul>
         </li>
         <li><a href="#引脚及功能">引脚及功能</a>
@@ -241,19 +241,19 @@
   </div>
 </div>
     <div class="post-content">
-      <p>本文按吉林大学考纲编写，仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。</p>
+      <p>本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。</p>
 <h1 id="微型计算机基础知识">微型计算机基础知识</h1>
 <h2 id="简介">简介</h2>
-<p>微型计算机由微处理器、存储器、输入/输出总线构成。</p>
+<p>微型计算机由微处理器、存储器、输入/输出、总线构成。</p>
 <h2 id="算术运算">算术运算</h2>
 <p>溢出判断：$C_{n-1} \oplus C_{n-2} =0$ 。</p>
 <p>其中 $C_{n-1}$ 表示最高位向前的进位，$C_{n-2}$ 表示次高位向前的进位， $\oplus$ 表示异或。</p>
 <h1 id="80868088微处理器">8086/8088微处理器</h1>
 <h2 id="功能结构">功能结构</h2>
-<p>8088包含两大功能单元：执行单元和总线接口单元。</p>
-<h3 id="执行单元">执行单元</h3>
+<p>8088包含两大功能单元：执行单元 (EU) 和总线接口单元 (BIU) 。</p>
+<h3 id="执行单元-eu">执行单元 (EU)</h3>
 <p>主要功能：译码分析指令、执行指令、暂存中间运算结果并保留结果特征。</p>
-<h3 id="总线接口单元">总线接口单元</h3>
+<h3 id="总线接口单元-biu">总线接口单元 (BIU)</h3>
 <p>主要功能：负责CPU与内存或输入/输出接口的信息传送，包括取指令、取操作数、保存运算结果。</p>
 <h2 id="引脚及功能">引脚及功能</h2>
 <p>$\rm{MN/\overline{MX}}$切换最小/最大模式，其中最小模式为高电平。</p>
@@ -295,7 +295,7 @@ $$</p>
 <p><code>SI</code>和<code>DI</code>都是变址指针寄存器。</p>
 <ul>
 <li><code>SI</code>称为源变址指针寄存器。</li>
-<li><code>DI</code>称为目的变址寄存器。</li>
+<li><code>DI</code>称为目的变址指针寄存器。</li>
 </ul>
 <p>二者通常用来存放<code>DS</code>和<code>ES</code>段中操作数的偏移地址。</p>
 <h3 id="段寄存器">段寄存器</h3>
