@@ -50,7 +50,7 @@
 <meta itemprop="name" content="微机原理与接口技术知识总结">
 <meta itemprop="description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"><meta itemprop="datePublished" content="2024-05-12T09:21:47+08:00" />
 <meta itemprop="dateModified" content="2024-05-12T09:21:47+08:00" />
-<meta itemprop="wordCount" content="5632">
+<meta itemprop="wordCount" content="5624">
 <meta itemprop="keywords" content="技术,汇编语言," /><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="微机原理与接口技术知识总结"/>
 <meta name="twitter:description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"/>
 
@@ -130,7 +130,7 @@
       <div class="post-meta">
         <span class="post-time"> 2024-05-12 </span>
         
-          <span class="more-meta"> 约 5632 字 </span>
+          <span class="more-meta"> 约 5624 字 </span>
           <span class="more-meta"> 预计阅读 12 分钟 </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
       </div>
@@ -147,7 +147,7 @@
         <li><a href="#算术运算">算术运算</a></li>
       </ul>
     </li>
-    <li><a href="#80868088微处理器">8086/8088微处理器</a>
+    <li><a href="#80868088-微处理器">8086/8088 微处理器</a>
       <ul>
         <li><a href="#功能结构">功能结构</a>
           <ul>
@@ -248,7 +248,7 @@
 <h2 id="算术运算">算术运算</h2>
 <p>溢出判断：$C_{n-1} \oplus C_{n-2} =0$ 。</p>
 <p>其中 $C_{n-1}$ 表示最高位向前的进位，$C_{n-2}$ 表示次高位向前的进位， $\oplus$ 表示异或。</p>
-<h1 id="80868088微处理器">8086/8088微处理器</h1>
+<h1 id="80868088-微处理器">8086/8088 微处理器</h1>
 <h2 id="功能结构">功能结构</h2>
 <p>8088包含两大功能单元：执行单元 (EU) 和总线接口单元 (BIU) 。</p>
 <h3 id="执行单元-eu">执行单元 (EU)</h3>
@@ -286,7 +286,7 @@
 $$</p>
 <h2 id="编程结构">编程结构</h2>
 <h3 id="通用寄存器">通用寄存器</h3>
-<p>共有8个，每个16位。</p>
+<p>共有 $8$ 个，每个 $16$ 位。</p>
 <p><code>AX</code>、<code>BX</code>、<code>CX</code>、<code>DX</code>还可以分为高 $8$ 位和低 $8$ 位寄存器，如<code>AH</code>、<code>AL</code>等。</p>
 <ul>
 <li><code>SP</code>为堆栈指针寄存器，内容为栈顶的偏移地址，与<code>SS</code>配对使用。</li>
@@ -439,7 +439,7 @@ $$</p>
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">bx</span><span class="p">][</span><span class="no">di</span><span class="p">]</span>    <span class="c1">;源操作数的物理地址为 dxX10h+bx+di
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">bx</span><span class="p">][</span><span class="no">di</span><span class="p">]</span>    <span class="c1">;源操作数的物理地址为 dsX10h+bx+di
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nf">mov</span> <span class="p">[</span><span class="no">bp</span><span class="p">][</span><span class="no">si</span><span class="p">],</span> <span class="no">dx</span>    <span class="c1">;目的操作数的物理地址为 ssX10h+bp+si
 </span></span></span></code></pre></td></tr></table>
 </div>
@@ -511,7 +511,7 @@ $$</p>
 <h3 id="io-端口">I/O 端口</h3>
 <p>要求输入端口具有通断控制能力，输出端口具备数据锁存能力。</p>
 <h3 id="io-端口编址方式">I/O 端口编址方式</h3>
-<h4 id="与存储器统一编址">与存储器统一编址</h4>
+<h4 id="与存储器统一编址">（与存储器）统一编址</h4>
 <p>将 I/O 端口作为内存单元对待，由 CPU 统一分配地址。</p>
 <div class="admonition info"><p class="admonition-title">特点</p>
 <p>优点：</p>
@@ -519,12 +519,12 @@ $$</p>
 <li>访问 I/O 端口和访问内存单元一样，所有访问内存的指令都可以访问 I/O 端口，不用设置专门的 I/O 指令；</li>
 <li>利用数据传送指令就可以实现 CPU 与 I/O 端口的数据交换；</li>
 <li>用测试指令可以测试端口的状态位，了解外设的状态，判断输入/输出操作的执行情况；</li>
-<li>不需要专用的 I/O 商品控制信号，简化了系统总线。</li>
+<li>不需要专用的 I/O 端口控制信号，简化了系统总线。</li>
 </ol>
 <p>缺点：
 占用一部分 CPU 地址空间。</p>
 </div>
-<h4 id="独立编址方式">独立编址方式</h4>
+<h4 id="独立编址">独立编址</h4>
 <p>CPU 给 I/O 端口分配一个独立的地址空间，这个地址空间与内存地址空间隔离，称为 I/O 地址空间。8088即采用该编址方式</p>
 <div class="admonition info"><p class="admonition-title">特点</p>
 <p>优点：</p>
@@ -539,7 +539,7 @@ $$</p>
 <h3 id="无条件传送方式">无条件传送方式</h3>
 <p>又称同步方式，适合简单外设的数据输入/输出。CPU 可直接与其进行数据交换，数据输入/输出的控制程序很简单。</p>
 <h3 id="程序查询传送方式">程序查询传送方式</h3>
-<p>程序查询传送方式适合外部设备数量不多，而且蹩相对简单、速度慢，但速度差异不大、对实时性要求不高的情况。</p>
+<p>程序查询传送方式适合外部设备数量不多，而且设备相对简单、速度慢，但速度差异不大、对实时性要求不高的情况。</p>
 <p>在有多个外设的环境中，程序查询传送方式的数据输入/输出效率低、实时性差。</p>
 <h3 id="中断传送方式">中断传送方式</h3>
 <div class="admonition info"><p class="admonition-title">特点</p>
