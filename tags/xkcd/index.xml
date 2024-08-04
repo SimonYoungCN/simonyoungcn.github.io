@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>xkcd on Simon&#39;s Lodge</title>
+    <title>Xkcd on Simon&#39;s Lodge</title>
     <link>https://simonyoungcn.github.io/tags/xkcd/</link>
-    <description>Recent content in xkcd on Simon&#39;s Lodge</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Xkcd on Simon&#39;s Lodge</description>
+    <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Wed, 31 Jan 2024 15:16:19 +0800</lastBuildDate>
     <atom:link href="https://simonyoungcn.github.io/tags/xkcd/index.xml" rel="self" type="application/rss+xml" />
