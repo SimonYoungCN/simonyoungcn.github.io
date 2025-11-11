@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Simon&#39;s Lodge</title>
+    <link>https://simonyoungcn.github.io/tags/</link>
+    <description>Recent content in Tags on Simon&#39;s Lodge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 12 May 2024 09:21:47 +0800</lastBuildDate><atom:link href="https://simonyoungcn.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>汇编</title>
+      <link>https://simonyoungcn.github.io/tags/%E6%B1%87%E7%BC%96/</link>
+      <pubDate>Sun, 12 May 2024 09:21:47 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/tags/%E6%B1%87%E7%BC%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>https://simonyoungcn.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Sun, 12 May 2024 09:21:47 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/tags/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xkcd</title>
+      <link>https://simonyoungcn.github.io/tags/xkcd/</link>
+      <pubDate>Wed, 31 Jan 2024 15:16:19 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/tags/xkcd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>翻译</title>
+      <link>https://simonyoungcn.github.io/tags/%E7%BF%BB%E8%AF%91/</link>
+      <pubDate>Wed, 31 Jan 2024 15:16:19 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/tags/%E7%BF%BB%E8%AF%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>语言</title>
+      <link>https://simonyoungcn.github.io/tags/%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Sun, 21 May 2023 10:00:00 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/tags/%E8%AF%AD%E8%A8%80/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>汇编 on Simon&#39;s Lodge</title>
+    <link>https://simonyoungcn.github.io/tags/%E6%B1%87%E7%BC%96/</link>
+    <description>Recent content in 汇编 on Simon&#39;s Lodge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 12 May 2024 09:21:47 +0800</lastBuildDate><atom:link href="https://simonyoungcn.github.io/tags/%E6%B1%87%E7%BC%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微机原理与接口技术知识总结</title>
+      <link>https://simonyoungcn.github.io/post/microcomputer/</link>
+      <pubDate>Sun, 12 May 2024 09:21:47 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/microcomputer/</guid>
+      <description>&lt;p&gt;本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

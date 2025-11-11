@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on Simon&#39;s Lodge</title>
+    <link>https://simonyoungcn.github.io/tags/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on Simon&#39;s Lodge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 12 May 2024 09:21:47 +0800</lastBuildDate><atom:link href="https://simonyoungcn.github.io/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微机原理与接口技术知识总结</title>
+      <link>https://simonyoungcn.github.io/post/microcomputer/</link>
+      <pubDate>Sun, 12 May 2024 09:21:47 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/microcomputer/</guid>
+      <description>&lt;p&gt;本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rime × 98 五笔</title>
+      <link>https://simonyoungcn.github.io/post/rime/</link>
+      <pubDate>Sat, 28 Oct 2023 09:05:26 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/rime/</guid>
+      <description>&lt;p&gt;之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>踩坑记录</title>
+      <link>https://simonyoungcn.github.io/post/traps/</link>
+      <pubDate>Tue, 21 Jun 2022 17:55:58 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/traps/</guid>
+      <description>&lt;p&gt;最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

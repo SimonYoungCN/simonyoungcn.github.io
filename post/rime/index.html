@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Rime × 98 五笔 - Simon&#39;s Lodge</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Simon Young" /><meta name="description" content="之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……
+" /><meta name="keywords" content="code, xkcd, math, language, 技术, 数学, 翻译, 语言" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.102.3 with theme even" />
+
+
+<link rel="canonical" href="https://simonyoungcn.github.io/post/rime/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.280e2d31ff27c77f249e99ca46fd33a1a66cbf83f82b9c820f19c8b6eadce717.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Rime × 98 五笔" />
+<meta property="og:description" content="之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://simonyoungcn.github.io/post/rime/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-10-28T09:05:26+08:00" />
+<meta property="article:modified_time" content="2023-10-28T09:05:26+08:00" />
+
+<meta itemprop="name" content="Rime × 98 五笔">
+<meta itemprop="description" content="之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……"><meta itemprop="datePublished" content="2023-10-28T09:05:26+08:00" />
+<meta itemprop="dateModified" content="2023-10-28T09:05:26+08:00" />
+<meta itemprop="wordCount" content="1350">
+<meta itemprop="keywords" content="技术," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Rime × 98 五笔"/>
+<meta name="twitter:description" content="之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Simon&#39;s Lodge</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页🏡</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章📃</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">分类📚</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Simon&#39;s Lodge</a>
+</div>
+
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页🏡</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章📃</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">分类📚</a>
+      </li>
+  </ul>
+</nav>
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Rime × 98 五笔</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2023-10-28 </span>
+        
+          <span class="more-meta"> 约 1350 字 </span>
+          <span class="more-meta"> 预计阅读 3 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#开始操作">开始操作</a>
+      <ul>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#配置">配置</a>
+          <ul>
+            <li><a href="#输入方案">输入方案</a></li>
+            <li><a href="#候选框">候选框</a></li>
+            <li><a href="#美化">美化</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……</p>
+<p>我抱着试一试的心态又安装了rime居然成功了。🤨</p>
+<h1 id="前言">前言</h1>
+<p>最先在选择五笔的版本上就纠结了半天。一会觉得86字根拆得逆天98看起顺眼，一会又觉得98字根爆多86简洁明了，其间还夹杂着自己是为什么要学习五笔的灵魂拷问。终于敲定了98的方案，却三天打鱼，两天晒网，中途放弃了好几次。</p>
+<p>我一开始用的是Windows自带的输入法 + WubiLex，后来觉得没有多少自定义的空间，也不太会用那个高科技软件，然后就换成了冰凌输入法。我很喜欢它的皮肤，但是它的词库总是怪怪的。无论是自带的还是从官网上下载的至善词库这个输入法总是要把不常用的候选项放在前面，于是风评还算可以的就还剩一个，那就是——rime。</p>
+<h1 id="开始操作">开始操作</h1>
+<h2 id="安装">安装</h2>
+<p>这步应该不用多说，直接去<a href="https://rime.im/">官网</a>下载安装包。</p>
+<h2 id="配置">配置</h2>
+<h3 id="输入方案">输入方案</h3>
+<p>首先要解决的问题就是选择一个合适的方案。98五笔虽然资源比起86来说不算多，但用户们都非常团结，一小伙人整合出了一个<a href="http://98wb.ysepan.com/">资源库</a>，里面的资料挺全，从学习资料到各种软件都有（不过个人感觉里面的五笔软件挺简陋的）。我用了软件内置的方案，据说采用的也是经典的98至善词库，方案在<a href="https://github.com/omgredfog/98wubi">GitHub</a>上也有。全clone下来塞进用户文件夹里就大功告成了。</p>
+<h3 id="候选框">候选框</h3>
+<p>我不太喜欢rime默认的竖排方案，也不想把打出的字符显示在候选栏而是想让它直接弄到文本框里。于是我二话不说直接打开<code>weasel.custom.yaml</code>然后在<code>patch:</code>下cv如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">&#34;style/horizontal&#34;: </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">&#34;style/inline_preedit&#34;: </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>瞬间就变成了我想要的样子。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>之前久攻不下，现在一气呵成，爽翻了。</p>
+<h3 id="美化">美化</h3>
+<p>默认的rime皮肤都不太好看，于是我又去找了点皮肤。</p>
+<p>找到了一个使用98五笔而且写了很多皮肤的大佬<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>，选了其中之一方案cv到<code>weasel.yaml</code>最下方。然后就可以去设置里面选了。字体我改成了更纱黑体，是我之前用Linux的输入法字体。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">font_face</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Sarasa UI SC&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">label_font_face</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Sarasa UI SC&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>暂时先写这么多，后面遇到了问题也好解决。</p>
+<hr>
+<p>更新：我还是心心念念着 <code>fcitx5-material-color</code> 的青色皮肤，于是我便自己改了一个，贴在这里记录一下。</p>
+<details class="admonition info"><summary class="admonition-title">皮肤配置详情</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">style</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">color_scheme</span><span class="p">:</span><span class="w"> </span><span class="l">win10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">font_face</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Sarasa UI SC&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">font_point</span><span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">horizontal</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">fullscreen</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">inline_preedit</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">preedit_type</span><span class="p">:</span><span class="w"> </span><span class="l">composition</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">display_tray_icon</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">label_font_face</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Sarasa UI SC&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">label_font_point</span><span class="p">:</span><span class="w"> </span><span class="m">15</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">label_format</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">layout</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">align_type</span><span class="p">:</span><span class="w"> </span><span class="l">center</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_width</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">corner_radius</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_padding</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_x</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_y</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">max_height</span><span class="p">:</span><span class="w"> </span><span class="m">600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">max_width</span><span class="p">:</span><span class="w"> </span><span class="m">1800</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">min_height</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">min_width</span><span class="p">:</span><span class="w"> </span><span class="m">160</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">round_corner</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shadow_offset_x</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;-15&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shadow_offset_y</span><span class="p">:</span><span class="w"> </span><span class="m">15</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">shadow_radius</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">20</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">mark_text</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;▏&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">preedit_type</span><span class="p">:</span><span class="w"> </span><span class="l">composition</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">vertical_text</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">vertical_text_left_to_right</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">vertical_text_with_wrap</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">preset_color_schemes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Win10</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xf0f0f0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Win10&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">font_point</span><span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">min_width</span><span class="p">:</span><span class="w"> </span><span class="m">160</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">min_height</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_height</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_padding</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">round_corner</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<p>附一张图看看成果：</p>
+<div class='align-center'>
+<p><img src="https://pic.imgdb.cn/item/655f56ddc458853aef372265.png" alt="0" title="几乎是完全复原了"></p>
+</div>
+<details class="admonition tip"><summary class="admonition-title">重复上屏小妙招</summary>
+<p>要想添加重复上屏功能非常简单，只需要在<code>schema</code>里如下操作：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">engine/translators</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="s2">&#34;history_translator@history&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># ......</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">history</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">input</span><span class="p">:</span><span class="w"> </span><span class="l">z</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">size</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">initial_quality</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c">#Z键上屏</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<hr>
+<p>后续：自己根据原有的皮肤改造了下，贴在这里，效果见下图。</p>
+<p><img src="https://pic.imgdb.cn/item/66378ef40ea9cb14037d8033.png" alt="1"></p>
+<details class="admonition info"><summary class="admonition-title">Win 10</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Win10</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xf0f0f0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Win10&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">font_point</span><span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_width</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_height</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_x</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_y</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_padding</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">round_corner</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<div class='align-center'>
+<p><img src="https://pic.imgdb.cn/item/66378ef40ea9cb14037d8033.png" alt="1" title="Win 10"></p>
+</div>
+<details class="admonition info"><summary class="admonition-title">Win10_Dark</summary>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">  </span><span class="nt">Win10_dark</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x333333</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x333333</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_candidate_back_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x889600</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_comment_text_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilited_label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0xffffff</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">label_color</span><span class="p">:</span><span class="w"> </span><span class="m">0x888888</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Win10dark&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">font_point</span><span class="p">:</span><span class="w"> </span><span class="m">16</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_width</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">border_height</span><span class="p">:</span><span class="w"> </span><span class="m">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_x</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">margin_y</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">candidate_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_spacing</span><span class="p">:</span><span class="w"> </span><span class="m">8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">hilite_padding</span><span class="p">:</span><span class="w"> </span><span class="m">12</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">round_corner</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></details>
+<div class='align-center'>
+<p><img src="https://pic.imgdb.cn/item/66378ef40ea9cb14037d8026.png" alt="2" title="Win10_Dark"></p>
+</div>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p><a href="https://tieba.baidu.com/p/5093330782">https://tieba.baidu.com/p/5093330782</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://hi-coder.gitee.io/blogs/bd28b704">https://hi-coder.gitee.io/blogs/bd28b704</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Simon Young</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2023-10-28
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处。</a><br /></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/soul-mates/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">灵魂伴侣</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/latin/">
+            <span class="next-text nav-default">拉丁语基础</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="SimonYoungCN/blogcomment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:simonchn@yeah.net" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/19604841/simon" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/SimonYoungCN" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/neusimon" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://space.bilibili.com/511414277" class="iconfont icon-bilibili" title="bilibili"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2022 - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>Simon Young</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script type="text/javascript" async src="/lib/mathjax/es5/tex-mml-chtml.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

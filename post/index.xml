@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Simon&#39;s Lodge</title>
+    <link>https://simonyoungcn.github.io/post/</link>
+    <description>Recent content in Posts on Simon&#39;s Lodge</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 11 Nov 2025 16:25:17 +0800</lastBuildDate><atom:link href="https://simonyoungcn.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chess Embedded Test</title>
+      <link>https://simonyoungcn.github.io/post/chess-embedded-test/</link>
+      <pubDate>Tue, 11 Nov 2025 16:25:17 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/chess-embedded-test/</guid>
+      <description>测试 lichess 嵌入效果。 代码来源：https://lichess.org/developers</description>
+    </item>
+    
+    <item>
+      <title>微机原理与接口技术知识总结</title>
+      <link>https://simonyoungcn.github.io/post/microcomputer/</link>
+      <pubDate>Sun, 12 May 2024 09:21:47 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/microcomputer/</guid>
+      <description>&lt;p&gt;本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>灵魂伴侣</title>
+      <link>https://simonyoungcn.github.io/post/soul-mates/</link>
+      <pubDate>Wed, 31 Jan 2024 15:16:19 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/soul-mates/</guid>
+      <description>&lt;div class=&#34;admonition quote&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;Benjamin Staffin&lt;/p&gt;
+&lt;p&gt;如果每个人都只有一个灵魂伴侣，这个伴侣是世界上任意确定的一个人，将会发生什么呢？&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rime × 98 五笔</title>
+      <link>https://simonyoungcn.github.io/post/rime/</link>
+      <pubDate>Sat, 28 Oct 2023 09:05:26 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/rime/</guid>
+      <description>&lt;p&gt;之前几次想在rime里搞小鹤音形输入法效果都不尽人意，再加上rime自带的皮肤并不算好看，而且当时配置的时候各种出问题，于是就气急败坏地弃坑了。我最近开始学习五笔，一直没有找到心仪的输入法，没想到……&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>拉丁语基础</title>
+      <link>https://simonyoungcn.github.io/post/latin/</link>
+      <pubDate>Sun, 21 May 2023 10:00:00 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/latin/</guid>
+      <description>&lt;p&gt;在图书馆里找到了一本 1983 年版肖原先生编著的《拉丁语基础》，觉得书上内容编排很好，于是在此记录。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>全员一起跳</title>
+      <link>https://simonyoungcn.github.io/post/everybody-jump/</link>
+      <pubDate>Sun, 12 Feb 2023 16:41:15 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/everybody-jump/</guid>
+      <description>&lt;div class=&#34;admonition quote&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;Thomas Bennett（和很多人）&lt;/p&gt;
+&lt;p&gt;如果地球上所有人都站得足够近然后跳起来，在同一瞬间同时落地会发生什么？&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>全员大逃离</title>
+      <link>https://simonyoungcn.github.io/post/everybody-out/</link>
+      <pubDate>Wed, 08 Feb 2023 15:08:39 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/everybody-out/</guid>
+      <description>&lt;div class=&#34;admonition quote&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;Adam&lt;/p&gt;
+&lt;p&gt;我们的能源是否足够将所有人送上太空？&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>半空的杯子</title>
+      <link>https://simonyoungcn.github.io/post/glass-half-empty/</link>
+      <pubDate>Mon, 09 Jan 2023 16:38:54 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/glass-half-empty/</guid>
+      <description>&lt;div class=&#34;admonition quote&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;Vittorio Iacovella&lt;/p&gt;
+&lt;p&gt;如果玻璃杯里的一杯水变成真正意义上的半空，会发生什么？&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>一摩尔鼹鼠</title>
+      <link>https://simonyoungcn.github.io/post/a-mole-of-moles/</link>
+      <pubDate>Tue, 02 Aug 2022 20:13:44 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/a-mole-of-moles/</guid>
+      <description>&lt;div class=&#34;admonition quote&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;Sean Rice&lt;/p&gt;
+&lt;p&gt;如果你把一摩尔鼹鼠&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;放在某个地方会发生什么？&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>尤达</title>
+      <link>https://simonyoungcn.github.io/post/yoda/</link>
+      <pubDate>Mon, 18 Jul 2022 12:07:41 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/yoda/</guid>
+      <description>&lt;div class=&#34;admonition quote&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;Ryan Finnie&lt;/p&gt;
+&lt;p&gt;尤达(Yoda)&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;可以输出多少功率的原力？&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>考试乱猜</title>
+      <link>https://simonyoungcn.github.io/post/sat-guessing/</link>
+      <pubDate>Tue, 12 Jul 2022 18:20:51 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/sat-guessing/</guid>
+      <description>&lt;div class=&#34;admonition quote&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;Rob Balder&lt;/p&gt;
+&lt;p&gt;如果每个SAT&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;考生做多选题时都乱猜一气会发生什么？会有多少个满分呢？&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>相对论棒球</title>
+      <link>https://simonyoungcn.github.io/post/relativistic-baseball/</link>
+      <pubDate>Tue, 28 Jun 2022 12:32:00 +0000</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/relativistic-baseball/</guid>
+      <description>&lt;div class=&#34;admonition quote&#34;&gt;&lt;p class=&#34;admonition-title&#34;&gt;Ellen Mcmanis&lt;/p&gt;
+&lt;p&gt;如果你用0.9倍光速扔出一个棒球, 将会发生什么？&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于翻译xkcd-what if的一点说明</title>
+      <link>https://simonyoungcn.github.io/post/explanation/</link>
+      <pubDate>Mon, 27 Jun 2022 21:35:55 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/explanation/</guid>
+      <description>&lt;p&gt;我从2018年左右第一次接触到《What if》，开始就觉得文风风趣幽默，如作者所言“再荒谬的问题都可能有一个科学答案”。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>踩坑记录</title>
+      <link>https://simonyoungcn.github.io/post/traps/</link>
+      <pubDate>Tue, 21 Jun 2022 17:55:58 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/traps/</guid>
+      <description>&lt;p&gt;最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新篇章</title>
+      <link>https://simonyoungcn.github.io/post/my-first-post/</link>
+      <pubDate>Mon, 20 Jun 2022 18:38:49 +0800</pubDate>
+      
+      <guid>https://simonyoungcn.github.io/post/my-first-post/</guid>
+      <description>经过7天的不懈努力，终于解决了电脑无线网卡，蓝牙断断续续，vim-plug无法安装，markdownpreview无响应，网站部署失败等问题</description>
+    </item>
+    
+  </channel>
+</rss>

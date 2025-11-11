@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>微机原理与接口技术知识总结 - Simon&#39;s Lodge</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Simon Young" /><meta name="description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。
+" /><meta name="keywords" content="code, xkcd, math, language, 技术, 数学, 翻译, 语言" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.102.3 with theme even" />
+
+
+<link rel="canonical" href="https://simonyoungcn.github.io/post/microcomputer/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.280e2d31ff27c77f249e99ca46fd33a1a66cbf83f82b9c820f19c8b6eadce717.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="微机原理与接口技术知识总结" />
+<meta property="og:description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://simonyoungcn.github.io/post/microcomputer/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2024-05-12T09:21:47+08:00" />
+<meta property="article:modified_time" content="2024-05-12T09:21:47+08:00" />
+
+<meta itemprop="name" content="微机原理与接口技术知识总结">
+<meta itemprop="description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"><meta itemprop="datePublished" content="2024-05-12T09:21:47+08:00" />
+<meta itemprop="dateModified" content="2024-05-12T09:21:47+08:00" />
+<meta itemprop="wordCount" content="5624">
+<meta itemprop="keywords" content="技术,汇编," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="微机原理与接口技术知识总结"/>
+<meta name="twitter:description" content="本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Simon&#39;s Lodge</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页🏡</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章📃</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">分类📚</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Simon&#39;s Lodge</a>
+</div>
+
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页🏡</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章📃</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">分类📚</a>
+      </li>
+  </ul>
+</nav>
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">微机原理与接口技术知识总结</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2024-05-12 </span>
+        
+          <span class="more-meta"> 约 5624 字 </span>
+          <span class="more-meta"> 预计阅读 12 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#微型计算机基础知识">微型计算机基础知识</a>
+      <ul>
+        <li><a href="#简介">简介</a></li>
+        <li><a href="#算术运算">算术运算</a></li>
+      </ul>
+    </li>
+    <li><a href="#80868088-微处理器">8086/8088 微处理器</a>
+      <ul>
+        <li><a href="#功能结构">功能结构</a>
+          <ul>
+            <li><a href="#执行单元-eu">执行单元 (EU)</a></li>
+            <li><a href="#总线接口单元-biu">总线接口单元 (BIU)</a></li>
+          </ul>
+        </li>
+        <li><a href="#引脚及功能">引脚及功能</a>
+          <ul>
+            <li><a href="#最小模式引脚">最小模式引脚</a></li>
+            <li><a href="#最大模式引脚">最大模式引脚</a></li>
+          </ul>
+        </li>
+        <li><a href="#存储器组织">存储器组织</a>
+          <ul>
+            <li><a href="#存储器分段管理">存储器分段管理</a></li>
+          </ul>
+        </li>
+        <li><a href="#编程结构">编程结构</a>
+          <ul>
+            <li><a href="#通用寄存器">通用寄存器</a></li>
+            <li><a href="#段寄存器">段寄存器</a></li>
+            <li><a href="#控制寄存器">控制寄存器</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#80868088-指令系统">8086/8088 指令系统</a>
+      <ul>
+        <li><a href="#8086-cpu-寻址方式">8086 CPU 寻址方式</a>
+          <ul>
+            <li><a href="#立即寻址">立即寻址</a></li>
+            <li><a href="#直接寻址">直接寻址</a></li>
+            <li><a href="#寄存器寻址">寄存器寻址</a></li>
+            <li><a href="#寄存器间接寻址">寄存器间接寻址</a></li>
+            <li><a href="#寄存器相对寻址">寄存器相对寻址</a></li>
+            <li><a href="#基址变址寻址">基址变址寻址</a></li>
+            <li><a href="#基址变址相对寻址">基址变址相对寻址</a></li>
+            <li><a href="#隐含寻址">隐含寻址</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#输入输出与中断技术">输入/输出与中断技术</a>
+      <ul>
+        <li><a href="#io-接口概述">I/O 接口概述</a>
+          <ul>
+            <li><a href="#io-接口功能">I/O 接口功能</a></li>
+            <li><a href="#io-端口">I/O 端口</a></li>
+            <li><a href="#io-端口编址方式">I/O 端口编址方式</a></li>
+          </ul>
+        </li>
+        <li><a href="#数据传送控制方式">数据传送控制方式</a>
+          <ul>
+            <li><a href="#无条件传送方式">无条件传送方式</a></li>
+            <li><a href="#程序查询传送方式">程序查询传送方式</a></li>
+            <li><a href="#中断传送方式">中断传送方式</a></li>
+            <li><a href="#直接存储器存取dma方式">直接存储器存取（DMA）方式</a></li>
+          </ul>
+        </li>
+        <li><a href="#中断">中断</a>
+          <ul>
+            <li><a href="#中断处理的基本过程">中断处理的基本过程</a></li>
+          </ul>
+        </li>
+        <li><a href="#80868088-中断系统">8086/8088 中断系统</a>
+          <ul>
+            <li><a href="#中断向量和中断向量表">中断向量和中断向量表</a></li>
+            <li><a href="#硬件中断">硬件中断</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#可编程接口芯片">可编程接口芯片</a>
+      <ul>
+        <li><a href="#8255a-控制步进电机">8255A 控制步进电机</a></li>
+        <li><a href="#可编程定时器计数器-8253">可编程定时器/计数器 8253</a>
+          <ul>
+            <li><a href="#工作方式">工作方式</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#数模转换">数/模转换</a>
+      <ul>
+        <li><a href="#dac-0832输出三种波型">DAC 0832输出三种波型</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>本文仅总结只需记忆等相关知识点，算术运算指令、原反补码等知识点略去。</p>
+<h1 id="微型计算机基础知识">微型计算机基础知识</h1>
+<h2 id="简介">简介</h2>
+<p>微型计算机由微处理器、存储器、输入/输出、总线构成。</p>
+<h2 id="算术运算">算术运算</h2>
+<p>溢出判断：$C_{n-1} \oplus C_{n-2} =0$ 。</p>
+<p>其中 $C_{n-1}$ 表示最高位向前的进位，$C_{n-2}$ 表示次高位向前的进位， $\oplus$ 表示异或。</p>
+<h1 id="80868088-微处理器">8086/8088 微处理器</h1>
+<h2 id="功能结构">功能结构</h2>
+<p>8088包含两大功能单元：执行单元 (EU) 和总线接口单元 (BIU) 。</p>
+<h3 id="执行单元-eu">执行单元 (EU)</h3>
+<p>主要功能：译码分析指令、执行指令、暂存中间运算结果并保留结果特征。</p>
+<h3 id="总线接口单元-biu">总线接口单元 (BIU)</h3>
+<p>主要功能：负责CPU与内存或输入/输出接口的信息传送，包括取指令、取操作数、保存运算结果。</p>
+<h2 id="引脚及功能">引脚及功能</h2>
+<p>$\rm{MN/\overline{MX}}$切换最小/最大模式，其中最小模式为高电平。</p>
+<h3 id="最小模式引脚">最小模式引脚</h3>
+<ul>
+<li>$\rm{IO/\overline{M}}$：三态输出，选择存储器或IO接口。</li>
+<li>$\rm{\overline{RD}}$：读控制信号，三态输出。</li>
+<li>$\rm{\overline{WD}}$：写控制信号，三态输出。</li>
+<li>$\rm{DT/\overline{R}}$：数据传送/接收信号，三态输出。</li>
+</ul>
+<h3 id="最大模式引脚">最大模式引脚</h3>
+<ul>
+<li>$\rm{\overline{MEMR}}$：存储器读。</li>
+<li>$\rm{\overline{MEMW}}$：存储器写。</li>
+<li>$\rm{\overline{IOR}}$：IO接口读。</li>
+<li>$\rm{\overline{IOW}}$：IO接口写。</li>
+</ul>
+<h2 id="存储器组织">存储器组织</h2>
+<p>8088 CPU 有 $20$ 根地址线，可寻址 $2^{20}=1 \rm{MB}$ 内存空间，地址范围为 $00000\rm{H} \sim \rm{FFFFFH}$。每个存储单元对应一个 $20$ 位的地址（物理地址），每个存储单元物理地址唯一。</p>
+<h3 id="存储器分段管理">存储器分段管理</h3>
+<div class="admonition question"><p class="admonition-title">为什么存储器要分段？</p>
+<p>因为 8088 CPU 内部寄存器的宽度为 $16$ 位，只能存放 $16$ 位的二进制数据，而 $16$ 位的寄存器无法存放$20$位的存储单元物理地址，所以对存储器采用分段式管理。</p>
+</div>
+<div class="admonition question"><p class="admonition-title">如何给存储器分段？</p>
+<p>8088 CPU 将可直接寻址的 $1 \rm{MB}$ 内存空间划分成一些连续的区域，称为段。每段的长度最大为 $64 \rm{KB}$，并要求段的起始地址必须能被 $16$ 整除，形式如 $\rm{XXXX0H}$ 。这种形式的地址最低 $4$ 位二进制数为 $0000\rm{B}$ ，所以只要存储高 $16$ 位就可以据此得到它的 $20$ 位物理地址。</p>
+</div>
+<p>逻辑地址：$\rm{XXXXH:YYYYH}$ 。其中$\rm{XXXXH}$为段基址，$\rm{YYYYH}$为段内偏移地址。</p>
+<p>$$
+物理地址=段基址 \times 10\rm{H} + 段内偏移量
+$$</p>
+<h2 id="编程结构">编程结构</h2>
+<h3 id="通用寄存器">通用寄存器</h3>
+<p>共有 $8$ 个，每个 $16$ 位。</p>
+<p><code>AX</code>、<code>BX</code>、<code>CX</code>、<code>DX</code>还可以分为高 $8$ 位和低 $8$ 位寄存器，如<code>AH</code>、<code>AL</code>等。</p>
+<ul>
+<li><code>SP</code>为堆栈指针寄存器，内容为栈顶的偏移地址，与<code>SS</code>配对使用。</li>
+<li><code>BP</code>为基址指针寄存器，常作为堆栈段中数组的基地址。</li>
+</ul>
+<p><code>SI</code>和<code>DI</code>都是变址指针寄存器。</p>
+<ul>
+<li><code>SI</code>称为源变址指针寄存器。</li>
+<li><code>DI</code>称为目的变址指针寄存器。</li>
+</ul>
+<p>二者通常用来存放<code>DS</code>和<code>ES</code>段中操作数的偏移地址。</p>
+<h3 id="段寄存器">段寄存器</h3>
+<ul>
+<li>代码段寄存器<code>CS</code>：存放当前代码段段基址。</li>
+<li>堆栈段寄存器<code>DS</code>：存放堆栈段的段基址。</li>
+<li>数据段寄存器<code>SS</code>：存放当前程序使用的数据段段基址。</li>
+<li>附加段寄存器<code>ES</code>：存放扩展数据段段基址。</li>
+</ul>
+<h3 id="控制寄存器">控制寄存器</h3>
+<p>包括指令指针寄存器<code>IP</code>和状态标志寄存器<code>FLAGS</code>。</p>
+<h4 id="flags"><code>FLAGS</code></h4>
+<p><code>FLAGS</code>称为标志寄存器或程序状态字，是一个 $16$ 位的寄存器，8088 CPU 只使用了其中 $9$ 位。这 $9$ 个标志位分为两类：一类称为状态标志，反映指令执行结果的特征，共有 $6$ 位；另一类是控制标志，用于控制微处理喊的操作，共有 $3$ 位。</p>
+<h5 id="状态标志位">状态标志位</h5>
+<ul>
+<li><code>CF</code>：进位标志。最高位产生进位或借位时置 <code>1</code>。</li>
+<li><code>PF</code>：奇偶标志。低 $8$ 位含有偶数个 $1$ 则置<code>1</code>。</li>
+<li><code>AF</code>：辅助进位标志。若低 $4$ 位向高 $4$ 位进位则置<code>1</code>。</li>
+<li><code>ZF</code>：零标志。若运算结果为 $0$ 则置<code>1</code>。</li>
+<li><code>SF</code>：符号标志。若运算结果为负则置<code>1</code>。</li>
+<li><code>OF</code>：溢出标志。当运算结果超出了本条指令所允许的数据范围则置<code>1</code>。溢出判断见上文。</li>
+</ul>
+<p>上述标志不符合置<code>1</code>情况时一律置<code>0</code>。</p>
+<h5 id="控制标志位">控制标志位</h5>
+<ul>
+<li><code>DF</code>：方向标志。置<code>0</code>时按增量变化，反之按减量变化。</li>
+<li><code>IF</code>：中断允许标志。置<code>1</code>时允许微处理器响应可屏蔽中断请求，反之禁止响应。</li>
+<li><code>TF</code>：单步标志。置<code>1</code>时 CPU 为单步方式。</li>
+</ul>
+<h1 id="80868088-指令系统">8086/8088 指令系统</h1>
+<h2 id="8086-cpu-寻址方式">8086 CPU 寻址方式</h2>
+<p>获得地址的方法，共 $8$ 种。</p>
+<h3 id="立即寻址">立即寻址</h3>
+<p>操作数为立即数。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="mi">2000</span><span class="no">h</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ah</span><span class="p">,</span> <span class="err">&#39;</span><span class="no">A</span><span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nf">all</span> <span class="no">al</span><span class="p">,</span> <span class="mi">6</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<h3 id="直接寻址">直接寻址</h3>
+<p>操作数在内存中，指令中直接给出操作数所在的内存单元的偏移地址。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">bx</span><span class="p">,</span> <span class="p">[</span><span class="mi">3200</span><span class="no">h</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">buff</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>通常情况下，存放器操作数默认在数据段，段基址在<code>DS</code>。</p>
+<div class="admonition example"><p class="admonition-title">又一例：段超越</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">bl</span><span class="p">,</span> <span class="no">es</span><span class="p">:[</span><span class="mi">2000</span><span class="no">h</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>该例物理地址为 $\rm{ES} \times 10\rm{H} + 2000\rm{H}$。</p>
+<h3 id="寄存器寻址">寄存器寻址</h3>
+<p>操作数在 CPU 内部的寄存器中。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">bl</span><span class="p">,</span> <span class="p">[</span><span class="mi">2000</span><span class="no">h</span><span class="p">]</span>   <span class="c">;操作数bl（目的操作数）的寻址方式为寄存器寻址
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<h3 id="寄存器间接寻址">寄存器间接寻址</h3>
+<p>操作数在<strong>内存</strong>中，内存单元的偏移地址存放在寄存器中。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">si</span><span class="p">]</span>    <span class="c">;操作数[si]的寻址方式为寄存器间接寻址
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>只有<code>BX</code>、<code>BP</code>、<code>DI</code>、<code>SI</code>能够作为寄存器间接寻址方式使用。<code>BP</code>在作为间接寄存器使用时，段基址默认为<code>SS</code>；其他 $3$ 个的默认段基址为<code>DS</code>。均可段超越。</p>
+<h3 id="寄存器相对寻址">寄存器相对寻址</h3>
+<p>操作数在<strong>内存</strong>中，内存单元的偏移地址一部分由间接寻址寄存器提供，一部分是指令给定的 $8$ 位或 $16$ 位地址位移量，二者相加相成操作数的有效地址。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">bx</span><span class="err">+</span><span class="no">data</span><span class="p">]</span>  <span class="c">;将以 bx+data 为首地址的连续两个内存单元的数据传送给 ax
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">mov</span> <span class="no">al</span><span class="p">,</span> <span class="p">[</span><span class="no">si</span><span class="err">+</span><span class="mi">20</span><span class="no">h</span><span class="p">]</span>   <span class="c">;将以 si+20h 为地址的内存单元的数据传送给 al
+</span></span></span><span class="line"><span class="cl"><span class="c">;上述指令的书写形式很灵活，也可以如下书写
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">bx</span><span class="p">]</span><span class="err">+</span><span class="no">data</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">20</span><span class="no">h</span> <span class="p">[</span><span class="no">si</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<h3 id="基址变址寻址">基址变址寻址</h3>
+<p>操作数在内存中，基址寄存器和变址寄存器想加作为操作数的偏移地址。8086 CPU 中寄存器<code>BX</code>和<code>BP</code>为基址寄存器，<code>SI</code>和<code>DI</code>为变址寄存器。这种寻址方式中，一个基址寄存器加一个变址寄存器构成操作数，操作数的形式只有 $4$ 种：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="err">[</span><span class="nf">bx</span><span class="p">]</span>    <span class="p">[</span><span class="no">si</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">[</span><span class="nf">bx</span><span class="p">]</span>    <span class="p">[</span><span class="no">di</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">[</span><span class="nf">bp</span><span class="p">]</span>    <span class="p">[</span><span class="no">si</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">[</span><span class="nf">bp</span><span class="p">]</span>    <span class="p">[</span><span class="no">di</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>8086汇编规定以基地址为主，如果基址寄存器为<code>BP</code>，则操作数的段基址默认由<code>SS</code>提供；若<code>BX</code>为基址寄存器，则段基址默认由<code>DS</code>提供。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">bx</span><span class="p">][</span><span class="no">di</span><span class="p">]</span>    <span class="c">;源操作数的物理地址为 dsX10h+bx+di
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">mov</span> <span class="p">[</span><span class="no">bp</span><span class="p">][</span><span class="no">si</span><span class="p">],</span> <span class="no">dx</span>    <span class="c">;目的操作数的物理地址为 ssX10h+bp+si
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>基址变址寻址方式要求必须一个基址和一个变址组合，不允许两个基址或两个变址组合，下面指令是错误的。</p>
+<div class="admonition failure"><p class="admonition-title">错误用法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">bx</span><span class="p">][</span><span class="no">bp</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">di</span><span class="p">][</span><span class="no">si</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<h3 id="基址变址相对寻址">基址变址相对寻址</h3>
+<p>操作数在内存中，操作数的地址由基址寄存器加上变址寄存器再加上地址位移量构成。如果基址寄存器为<code>BP</code>，则段基址默认由<code>SS</code>提供；若<code>BX</code>为基址寄存器，则段基址默认由<code>DS</code>提供。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="no">data</span><span class="p">[</span><span class="no">bx</span><span class="p">][</span><span class="no">si</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">bp</span><span class="p">][</span><span class="no">di</span><span class="p">]</span><span class="no">data</span>
+</span></span><span class="line"><span class="cl"><span class="c">;指令也可书写为
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">data</span><span class="err">+</span><span class="no">bx</span><span class="err">+</span><span class="no">si</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="p">[</span><span class="no">data</span><span class="err">+</span><span class="no">bx</span><span class="p">][</span><span class="no">si</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="no">data</span><span class="p">[</span><span class="no">bx</span><span class="err">+</span><span class="no">si</span><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>这种寻址方式主要用于二维数组操作。地址位移量作为数组首地址，基址寄存器寻址行，变址寄存器寻址列，可以很方便地实现数据阵列检索。</p>
+<div class="admonition warning"><p class="admonition-title">注意</p>
+<p>基址变址相对寻址方式要求必须一个基址和一个变址组合，不允许两个基址或两个变址组合。</p>
+</div>
+<h3 id="隐含寻址">隐含寻址</h3>
+<p>操作码地指明操作数的地址，例如乘法指令、字符串操作指令。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mul</span> <span class="no">bl</span>  <span class="c">; al 乘以 bl，结果存在 ax 中
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">mov</span> <span class="no">sb</span>  <span class="c">;把 ds:si 指明的内存单元的数据传送到 es:di 指明的内存单元中
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<h1 id="输入输出与中断技术">输入/输出与中断技术</h1>
+<h2 id="io-接口概述">I/O 接口概述</h2>
+<h3 id="io-接口功能">I/O 接口功能</h3>
+<ul>
+<li>地址译码</li>
+<li>数据传送</li>
+<li>提供握手联络信号</li>
+<li>数据格式转换</li>
+<li>信号电平转换</li>
+<li>错误检测功能</li>
+</ul>
+<h3 id="io-端口">I/O 端口</h3>
+<p>要求输入端口具有通断控制能力，输出端口具备数据锁存能力。</p>
+<h3 id="io-端口编址方式">I/O 端口编址方式</h3>
+<h4 id="与存储器统一编址">（与存储器）统一编址</h4>
+<p>将 I/O 端口作为内存单元对待，由 CPU 统一分配地址。</p>
+<div class="admonition info"><p class="admonition-title">特点</p>
+<p>优点：</p>
+<ol>
+<li>访问 I/O 端口和访问内存单元一样，所有访问内存的指令都可以访问 I/O 端口，不用设置专门的 I/O 指令；</li>
+<li>利用数据传送指令就可以实现 CPU 与 I/O 端口的数据交换；</li>
+<li>用测试指令可以测试端口的状态位，了解外设的状态，判断输入/输出操作的执行情况；</li>
+<li>不需要专用的 I/O 端口控制信号，简化了系统总线。</li>
+</ol>
+<p>缺点：
+占用一部分 CPU 地址空间。</p>
+</div>
+<h4 id="独立编址">独立编址</h4>
+<p>CPU 给 I/O 端口分配一个独立的地址空间，这个地址空间与内存地址空间隔离，称为 I/O 地址空间。8088即采用该编址方式</p>
+<div class="admonition info"><p class="admonition-title">特点</p>
+<p>优点：</p>
+<ol>
+<li>I/O 地址空间小，地址线根数少，在接口中 I/O 端口地址译码电路较简单；</li>
+<li>不占用内存空间。</li>
+</ol>
+<p>缺点：
+需要专用的输入/输出控制信号和专用的 I/O 指令。</p>
+</div>
+<h2 id="数据传送控制方式">数据传送控制方式</h2>
+<h3 id="无条件传送方式">无条件传送方式</h3>
+<p>又称同步方式，适合简单外设的数据输入/输出。CPU 可直接与其进行数据交换，数据输入/输出的控制程序很简单。</p>
+<h3 id="程序查询传送方式">程序查询传送方式</h3>
+<p>程序查询传送方式适合外部设备数量不多，而且设备相对简单、速度慢，但速度差异不大、对实时性要求不高的情况。</p>
+<p>在有多个外设的环境中，程序查询传送方式的数据输入/输出效率低、实时性差。</p>
+<h3 id="中断传送方式">中断传送方式</h3>
+<div class="admonition info"><p class="admonition-title">特点</p>
+<p>优点：实时性好、节省 CPU 时间、外设具有申请服务的主动权，并且在一定程度上实现设备与 CPU 并行工作。</p>
+<p>缺点：</p>
+<ol>
+<li>中断方式仍需要通过 CPU 执行程序实现外设与 CPU 之间的信息传送；</li>
+<li>CPU 每次中断都需要花费时间保护断点和现场，无法满足高速 I/O 设备的速度要求。</li>
+</ol>
+</div>
+<p>前三种方式被统称为程序控制下的输入/输出方式，简称 PIO (Programmed Input and Output) 模式。</p>
+<h3 id="直接存储器存取dma方式">直接存储器存取（DMA）方式</h3>
+<p>在内存储器和 I/O 设备之间建立直接的数据通路，使 I/O 设备和内存不经过 CPU 的干预直接交换数据，实现内存与外设之间的快速数据传送。</p>
+<h2 id="中断">中断</h2>
+<h3 id="中断处理的基本过程">中断处理的基本过程</h3>
+<p>基本过程包括中断请求、中断判优、中断响应、中断服务、中断返回 $5$ 个阶段。</p>
+<h4 id="中断判优">中断判优</h4>
+<ol>
+<li>软件判优</li>
+<li>硬件判优：
+<ol>
+<li>菊花链判优电路</li>
+<li>中断控制器判优</li>
+</ol>
+</li>
+</ol>
+<h4 id="中断响应">中断响应</h4>
+<p>中断响应时， CPU 向中断源发出中断响应信号，同时：</p>
+<ol>
+<li>保护硬件现场。</li>
+<li>关中断。</li>
+<li>保护断点。</li>
+<li>获得中断服务程序的入口地址。</li>
+</ol>
+<h2 id="80868088-中断系统">8086/8088 中断系统</h2>
+<p>8086/8088 含有 $2$ 个中断请求信号输入引脚 $\rm{INTR}$ 和 $\rm{NMI}$，还有一个中断应答引脚 $\rm{\overline{INTA}}$。与中断相关的指令有：<code>INT</code>、<code>INTO</code>、<code>INT3</code>、<code>IRET</code>，还有 $2$ 个与中断相关的标志位 <code>IF</code>、<code>TF</code>。其可处理 $256$ 不同类型的中断，每种类型的中断一个编号，称为中断类型码或中断微量码，编号范围为 $0 \sim 255$ 。</p>
+<h3 id="中断向量和中断向量表">中断向量和中断向量表</h3>
+<p>中断服务程序的入口地址称为中断向量。 $256$ 个中断微量存储在内存中构成了一张表，称为中断向量表。每个中断微量都包括两部分：段基址和偏移地址。因此，存放 $1$ 个中断向量需要 $4$ 个内存单元，$256$ 种中断向量共需要 $1\rm{K}$ 个内存单元。</p>
+<p>8086/8088 系统中的中断向量表位于内存起始地址 $00000 \sim 003\rm{FFH}$ 的存储区内。每 $4$ 个单元存放一个中断向量，低地址的两个单元存放中断向量的偏移地址，高地址的两个单元存放中断向量的段基址。</p>
+<p>中断向量在中断向量表中的存放首地址称为向量地址，其值为：中断类型码 $\times 4$ 。</p>
+<div class="admonition tip"><p class="admonition-title">执行方法</p>
+<p>当 CPU 调用中断类型码为 $n$ 的中断服务程序时，首先把 $n$ 乘以 $4$ ，得到它的向量地址 $4n$ ，然后把 $4n+1:4n$ 两个单元的内容取出并装入 <code>IP</code>寄存器；再把 $(4n+3:4n+2)$ 两个单元的内容取出并装入 <code>CS</code> 寄存器， CPU 就获得了 $n$ 的中断服务程序的入口地址，进而转去执行中断服务程序。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+  <p>DOS 系统功能调用的中断类型号为 <code>21H</code>，向量地址为 $n \times 4 = 84\rm{H}$ 。</p>
+</div>
+</div>
+<p>8086/8088 CPU 专用中断类型有 $5$ 个：</p>
+<h4 id="类型-0">类型 $0$</h4>
+<p>除法错中断，结果溢出或是除以 $0$ 时发生。</p>
+<h4 id="类型-1">类型 $1$</h4>
+<p>单步中断，也称为陷阱中断。若 <code>TF</code> 标志位为 <code>1</code>，CPU 每执行一条指令后，就停下来等待，并提示 CPU 内部各寄存器的值和一些附带信息。</p>
+<h4 id="类型-2">类型 $2$</h4>
+<p>非屏蔽中断，该中断不能被软件禁止。该中断由 CPU 之外的硬件产生，通过 CPU 的 $\rm{NMI}$ 引脚输入中断请求信号，上升沿触发。</p>
+<h4 id="类型-3">类型 $3$</h4>
+<p>断点中断，由一个单字节指令 <code>INT3</code> 引起的中断，指令代码为 <code>0CCH</code>。</p>
+<h4 id="类型-4">类型 $4$</h4>
+<p>溢出中断，<code>INTO</code> 指令的专用向量。若 <code>OF</code> 标志位为 <code>1</code> 则中断，否则不执行任何操作。</p>
+<h3 id="硬件中断">硬件中断</h3>
+<p>8086/8088 有两个硬件中断请求信号输入引脚：$\rm{NMI}$ 和 $\rm{INTR}$，用来接收外部中断源产生的中断请求。前者接收非屏蔽中断请求，后者接收可屏蔽中断请求。</p>
+<h4 id="非屏蔽中断">非屏蔽中断</h4>
+<p>非屏蔽中断，该中断不能被软件禁止。该中断由 CPU 之外的硬件产生，$\rm{NMI}$ 采用上升沿触发，优先级高于可屏蔽中断。CPU 响应该中断时，将所有内部寄存器存于使用电池的备份存储器或 EEPROM 中。该中断用于处理紧急事件。</p>
+<h4 id="可屏蔽中断">可屏蔽中断</h4>
+<p>$\rm{INTR}$ 采用电平触发方式，高电平有效。$\rm{INTR}$ 由外部中断源置位，并在中断服务程序内部被清除。CPU 收到中断请求信号后，检测中断允许标志位 <code>IF</code>，若 <code>IF</code> $= 1$，CPU 响应 $\rm{INTR}$ 请求；若 <code>IF</code> $= 0$, CPU 屏蔽 $\rm{INTR}$ 请求。被屏蔽的中断请求信号可一直保持高电平，直到被 CPU 接收。可屏蔽中断的优先级低于非屏蔽中断。中断允许标志位 <code>IF</code> 可以用指令 <code>STI</code> 和 <code>CLI</code> 进行设置。</p>
+<p>CPU 响应 $\rm{INTR}$ 请求时，启动中断响应总线周期，发中断应答信号 $\rm{\overline{INTA}}$ 。系统连续产生 $2$ 个 $\rm{\overline{INTA}}$ 脉冲，用于从数据总线接收中断控制器送出的中断类型码。</p>
+<h1 id="可编程接口芯片">可编程接口芯片</h1>
+<h2 id="8255a-控制步进电机">8255A 控制步进电机</h2>
+<p>工作在方式0下，控制字起始 $3$ 位一定为 <code>100</code>，输出为<code>0</code>输入为<code>1</code>，无关为<code>0</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mode</span> <span class="no">equ</span> <span class="mi">082</span><span class="no">h</span>       <span class="c">;8255A 控制字
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">porta</span> <span class="no">equ</span> <span class="mi">0800</span><span class="no">h</span>     <span class="c">;端口 a 地址
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="no">contrl</span> <span class="no">equ</span> <span class="mi">08003</span><span class="no">h</span>   <span class="c">;控制端口地址
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>
+</span></span><span class="line"><span class="cl"><span class="c">;初始化
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="no">data</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ds</span><span class="p">,</span> <span class="no">ax</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="no">contrl</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="no">mode</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="no">porta</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">;单/双八拍
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nl">step8:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="no">porta</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">8</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">9</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">;双四拍
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nl">step4d:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="no">porta</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">6</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">9</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">;单四拍
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="nl">step4s:</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="no">porta</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">8</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">call</span> <span class="no">delay</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="可编程定时器计数器-8253">可编程定时器/计数器 8253</h2>
+<h3 id="工作方式">工作方式</h3>
+<p>以下工作方式均为软启动。</p>
+<h4 id="方式0--计数结束中断">方式0 —— 计数结束中断</h4>
+<h4 id="方式2--频率发生器">方式2 —— 频率发生器</h4>
+<p>计数器在 <code>OUT</code>端产生一系列连续的脉冲信号，脉冲宽度为一个时钟脉冲的宽度。脉冲信号的周期为 $N \times T_{CLK}$，其中低电平的宽度为 $1$ 个 $T_{CLK}$。</p>
+<p><code>OUT</code> 端脉冲周期为：$T_{OUT} = N \times T_{CLK}$</p>
+<p>脉冲频率：$F_{OUT} = F_{CLK}/{N}$</p>
+<p>输出脉冲频率是输入脉冲频率的 $1/N$，因此 $N$ 也常被称为分频系数。</p>
+<h4 id="方式3--方波发生器">方式3 —— 方波发生器</h4>
+<p><code>OUT</code> 端输出方波，其信号周期为 $N \times T_{CLK}$。$\rm{N}$为计数初值，也称为时间常数。</p>
+<div class="admonition example"><p class="admonition-title">一例</p>
+<p>设 8253 端口地址为 $\rm{FCF8H} \sim \rm{FCFBH}$，利用计数器 $1$ 作方波发生器，给定 $\rm{CLK_1}$ 为 $2 \rm{MHz}$，要求产生频率为 $1\rm{kHz}$ 的方波，<code>BCD</code>码计数。编程初始化 8253。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="mi">0</span><span class="no">fcfbh</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">01110111</span><span class="no">b</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="mi">0</span><span class="no">fcf9h</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">ax</span><span class="p">,</span> <span class="mi">2000</span><span class="no">h</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl"><span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="no">ah</span>
+</span></span><span class="line"><span class="cl"><span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<h1 id="数模转换">数/模转换</h1>
+<h2 id="dac-0832输出三种波型">DAC 0832输出三种波型</h2>
+<p>设 DAC 0832 的端口地址为 <code>200H</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-asm" data-lang="asm"><span class="line"><span class="cl"><span class="c">;锯齿波程序
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>        <span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="mi">200</span><span class="no">h</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="nl">next1:</span>  <span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">inc</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">jmp</span> <span class="no">next1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">;三角波程序
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>        <span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="mi">200</span><span class="no">h</span>
+</span></span><span class="line"><span class="cl"><span class="nl">next0:</span>  <span class="nf">mov</span> <span class="no">cx</span><span class="p">,</span> <span class="mi">0</span><span class="no">ffh</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="nl">next1:</span>  <span class="nf">out</span> <span class="no">dx</span><span class="p">,</span><span class="no">al</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">inc</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">loop</span> <span class="no">next1</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span> <span class="no">cx</span><span class="p">,</span> <span class="mi">0</span><span class="no">ffh</span>
+</span></span><span class="line"><span class="cl"><span class="nl">next2:</span>  <span class="nf">dec</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">loop</span> <span class="no">next2</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">jmp</span> <span class="no">next0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">;方波程序
+</span></span></span><span class="line"><span class="cl"><span class="c"></span>        <span class="nf">mov</span> <span class="no">dx</span><span class="p">,</span> <span class="mi">200</span><span class="no">h</span>
+</span></span><span class="line"><span class="cl"><span class="nl">next:</span>   <span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">mov</span> <span class="no">al</span><span class="p">,</span> <span class="mi">0</span><span class="no">ffh</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">out</span> <span class="no">dx</span><span class="p">,</span> <span class="no">al</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">call</span> <span class="no">delay</span>
+</span></span><span class="line"><span class="cl">        <span class="nf">jmp</span> <span class="no">next</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Simon Young</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2024-05-12
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处。</a><br /></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+          <a href="/tags/%E6%B1%87%E7%BC%96/">汇编</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/chess-embedded-test/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Chess Embedded Test</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/soul-mates/">
+            <span class="next-text nav-default">灵魂伴侣</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="SimonYoungCN/blogcomment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:simonchn@yeah.net" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/19604841/simon" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/SimonYoungCN" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/neusimon" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://space.bilibili.com/511414277" class="iconfont icon-bilibili" title="bilibili"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2022 - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>Simon Young</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script type="text/javascript" async src="/lib/mathjax/es5/tex-mml-chtml.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

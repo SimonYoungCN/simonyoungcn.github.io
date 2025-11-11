@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>踩坑记录 - Simon&#39;s Lodge</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Simon Young" /><meta name="description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃
+" /><meta name="keywords" content="code, xkcd, math, language, 技术, 数学, 翻译, 语言" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.102.3 with theme even" />
+
+
+<link rel="canonical" href="https://simonyoungcn.github.io/post/traps/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.280e2d31ff27c77f249e99ca46fd33a1a66cbf83f82b9c820f19c8b6eadce717.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="踩坑记录" />
+<meta property="og:description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://simonyoungcn.github.io/post/traps/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-06-21T17:55:58+08:00" />
+<meta property="article:modified_time" content="2022-06-21T17:55:58+08:00" />
+
+<meta itemprop="name" content="踩坑记录">
+<meta itemprop="description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃"><meta itemprop="datePublished" content="2022-06-21T17:55:58+08:00" />
+<meta itemprop="dateModified" content="2022-06-21T17:55:58+08:00" />
+<meta itemprop="wordCount" content="3427">
+<meta itemprop="keywords" content="技术," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="踩坑记录"/>
+<meta name="twitter:description" content="最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Simon&#39;s Lodge</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页🏡</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章📃</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">分类📚</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Simon&#39;s Lodge</a>
+</div>
+
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页🏡</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章📃</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">分类📚</a>
+      </li>
+  </ul>
+</nav>
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">踩坑记录</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-06-21 </span>
+        
+          <span class="more-meta"> 约 3427 字 </span>
+          <span class="more-meta"> 预计阅读 7 分钟 </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次阅读 </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#neovim及插件">Neovim及插件</a>
+          <ul>
+            <li><a href="#initvim">init.vim</a></li>
+            <li><a href="#usnippets">Usnippets</a></li>
+            <li><a href="#markdownpreview">MarkdownPreview</a></li>
+          </ul>
+        </li>
+        <li><a href="#hugo">Hugo</a>
+          <ul>
+            <li><a href="#配置主题">配置主题</a></li>
+            <li><a href="#部署到github-pages">部署到GitHub Pages</a></li>
+            <li><a href="#评论utterances">评论(Utterances)</a></li>
+          </ul>
+        </li>
+        <li><a href="#vs-code">VS Code</a>
+          <ul>
+            <li><a href="#snippets">snippets</a></li>
+          </ul>
+        </li>
+        <li><a href="#面部识别软件howdy">面部识别软件howdy</a></li>
+        <li><a href="#后记">后记</a></li>
+        <li><a href="#后后记">后后记</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>最近踩了许多坑，总结出来与君共勉。由于本人的确是纯小白，每一个坑基本都踩过，文章也应该会有点小儿科，烦请见谅。😃</p>
+<div class="admonition info"><p class="admonition-title">配置环境</p>
+<p>Windows 10 20H2 惠普战66 R5-5625U (HP ZHAN 66 Pro A 14 inch G5 Notebook PC)</p>
+</div>
+<h2 id="neovim及插件">Neovim及插件</h2>
+<h3 id="initvim">init.vim</h3>
+<p>Neovim插件配置文件即为<code>init.vim</code>，安装和配置插件都在这里实现。一般是在<code>call begin()</code>和<code>call end()</code>之间加入自己需要安装的插件，然后再在最后添加<code>let g:</code>等配置信息。说白了Neovim的配置都在这个文件里部署, 例如设置鼠标控制光标等。不知道是系统的原因还是什么，我只能把<code>init.vim</code>放在<code>C:\Users\simon\AppData\Local\nvim</code>里而把存放插件的地方设置为<code>C:\Users\simon\.AppData\local\nvim\plugged</code>里。放在其他地方就会报错。</p>
+<p><img src="https://pic.imgdb.cn/item/62b263a809475431298d05d8.png" alt="看这图看了一天…… " title="看这图看了一天……"></p>
+<p>另外, 我似乎还不知道Windows 10 系统下如何打通与Neovim的剪贴板，希望知道的人能够慷慨留言告诉我一下。😉</p>
+<h3 id="usnippets">Usnippets</h3>
+<p>这确实是个好东西。但是它需要配合<code>vim-snippet</code>使用，否则就只是一具空壳而已。</p>
+<h3 id="markdownpreview">MarkdownPreview</h3>
+<p>由GitHub用户&quot;iamcco&quot;开发，使用十分便利。</p>
+<p>只不过在我的环境下，用它打开默认浏览器还需要把<code>chrome.exe</code>的路径添加到path里。</p>
+<h2 id="hugo">Hugo</h2>
+<h3 id="配置主题">配置主题</h3>
+<p>直接下载对应主题文件，粘贴到<code>theme</code>文件夹即可。但是配置文件里主题名称要和主题文件夹名称保持一致。</p>
+<h4 id="mathjax支持">mathjax支持</h4>
+<p>我的网站上使用的主题是even，由GitHub用户ahonn开发，GitHub用户olOwOlo移植到了hugo上。在此对两位开发者致以崇高的敬意。不过虽然我在<code>config.toml</code>里开启了对mathjax的支持，数学公式仍然无法被识别。于是我在GitHub上下载了mathjax的文件，也确实能够识别数学公式（注意此处git clone下来的mathjax文件夹名称应该改为<code>mathjax</code>，还要全部小写，并放在<code>your-site/static/lib/mathjax</code>的路径里）。但在进行<code>git push</code>之后报错：</p>
+<div class="admonition failure"><p class="admonition-title">build-checkout</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Error: fatal: No url found <span class="k">for</span> submodule path <span class="s1">&#39;lib/mathjax&#39;</span> in .gitmodules
+</span></span><span class="line"><span class="cl">Error: The process <span class="s1">&#39;/usr/bin/git&#39;</span> failed with <span class="nb">exit</span> code <span class="m">128</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>后面上网查了一下，发现是<code>mathjax</code>文件夹里还有隐藏的<code>.git</code>文件，需要执行如下命令将其删除<a href="(https://www.jianshu.com/p/7cc6ea70e48e)" title="简书">1</a>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ git rm --cached
+</span></span><span class="line"><span class="cl">$ git add .
+</span></span><span class="line"><span class="cl">$ git commit -m <span class="s2">&#34;commit messge&#34;</span>
+</span></span><span class="line"><span class="cl">$ git push origin <span class="o">[</span>branch_name<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="部署到github-pages">部署到GitHub Pages</h3>
+<p>目前GitHub已经默认主分支名称为<code>main</code>，但大部分教程仍旧是<code>master</code>，相关改动可以参考<a href="https://zhuanlan.zhihu.com/p/57361697">这里</a>的评论区。反正我<code>push</code>时<code>main</code>分支一直报错，于是我先push到<code>master</code>，然后把<code>main</code>给删了，简单粗暴。😆</p>
+<h3 id="评论utterances">评论(Utterances)</h3>
+<p>另建一个<code>repo</code>，用于存放<code>issue</code>形式的评论。</p>
+<div class="admonition warning"><p class="admonition-title">注意</p>
+<p>Hugo的配置文档里第一行<code>baseURL</code>不能加<code>www.</code>的前缀，只能是<code>https://[YOUR_GITHUB_ID].github.io</code>。另外, 配置文件里的<code>repo</code>只用填写自己的repo名，不用加用户名。</p>
+</div>
+<p>为了这一问题我甚至还去Utterances里死皮赖脸提了个issue…… 😂</p>
+<h2 id="vs-code">VS Code</h2>
+<p>Neovim实在用不惯，只用来做笔记算了，积累了小半篇的<code>markdown.snippet</code>，做笔记的速度还是蛮快的。😃只不过各方面都没有VSCode好用：中文逗号、冒号等打不出来；不能复制粘贴；功能不强大。
+曾经看到过知乎上抖机灵的回答，说(Neo)vim是军刀，IDE是航母。不可否认，vim系列的编辑器优点多多，比如对系统配置要求低，运行速度快，可键盘控制。但个人认为，军刀安装再多插件，装备再丰富，终究不敌航母。写东西是为了方便快捷，而不是去习惯畸形的操作方式。只有自己用起来最顺手的东西才是最好的。</p>
+<p>用VSCode其实还挺方便的，就比如复制粘贴，可以大大提高我的效率(doge)。</p>
+<div class="admonition warning"><p class="admonition-title">注意</p>
+<p>若要在vscode里为 <code>markdown</code>文件创建snippets，除了按照 <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets">官方文档</a>说的来做之外，还要找到vscode的设置文件 <code>settings.json</code>，在下方加一行 <code>&quot;[markdown]&quot;: { &quot;editor.quickSuggestions&quot;: true }</code>。<a href="(https://stackoverflow.com/questions/32703317/how-to-activate-markdown-user-snippets-in-visual-studio-code)" title="stackoverflow">2</a></p>
+</div>
+<h3 id="snippets">snippets</h3>
+<p>换用VSCode后死心不改，仍然不舍放下snippets。于是网上一查，又开始折腾。vscode的snippets是用<code>json</code>格式写的。这里分享一个<a href="https://snippet-generator.app/">快速制作json格式snippets的网站</a>。好不容易做完之后，却发现markdown文件根本无法弹出补全列表。查了一下，需要在<code>settings.json</code>里加入如下语句：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;[markdown]&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.renderWhitespace&#34;</span><span class="p">:</span> <span class="s2">&#34;all&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.quickSuggestions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;other&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;comments&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;strings&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">          <span class="nt">&#34;editor.acceptSuggestionOnEnter&#34;</span><span class="p">:</span> <span class="s2">&#34;on&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span><span class="err">,</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>但我添加之后，系统一直报错，后来在网上查找发现，依据<code>json</code>格式文件规定，在这段代码前还应加上一个逗号。</p>
+<p>就先写到这里, 以后随时参考，随时补充。</p>
+<div class="admonition info"><p class="admonition-title">新配置环境</p>
+<p>Linux Mint 21 x86_64 linux内核版本 5.15.0-43-generic</p>
+<p>惠普战66 R5-5625U</p>
+</div>
+<h2 id="面部识别软件howdy">面部识别软件howdy</h2>
+<p>正好我的电脑没有指纹识别功能（只有模具），于是看到<a href="https://itsfoss.com/face-unlock-ubuntu/">这篇文章</a>之后准备大展身手。
+但是在下载的时候提示：</p>
+<div class="admonition failure"><p class="admonition-title">终端</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Downloading <span class="m">3</span> required data files...
+</span></span><span class="line"><span class="cl">Unpacking...
+</span></span><span class="line"><span class="cl">bzip2: Can<span class="err">&#39;</span>t open input file *.bz2: No such file or directory.
+</span></span><span class="line"><span class="cl">Error <span class="k">while</span> running last <span class="nb">command</span>
+</span></span><span class="line"><span class="cl">dpkg: 处理软件包 howdy <span class="o">(</span>--configure<span class="o">)</span>时出错：
+</span></span><span class="line"><span class="cl"> 已安装 howdy 软件包 post-installation 脚本 子进程返回错误状态 <span class="m">1</span>
+</span></span><span class="line"><span class="cl">正在处理用于 man-db <span class="o">(</span>2.9.1-1<span class="o">)</span> 的触发器 ...
+</span></span><span class="line"><span class="cl">在处理时有错误发生：
+</span></span><span class="line"><span class="cl"> howdy
+</span></span><span class="line"><span class="cl">E: Sub-process /usr/bin/dpkg returned an error code <span class="o">(</span>1<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>当时我是百思不得解，卸了重装还是报错。于是搜索了一下，发现少了三个文件。<a href="https://ask.csdn.net/questions/3273360">CSDN</a>和<a href="https://github.com/boltgolt/howdy/issues/307">howdy项目的issue里</a>都有提到这个问题。
+结果就是有the Great Firewall，网络环境堪忧，文件下载不下来。要去<a href="https://github.com/davisking/dlib-models">这里</a>把<code>dlib_face_recognition_resnet_model_v1.dat.bz2</code>、<code>mmod_human_face_detector.dat.bz2</code>和<code>shape_predictor_5_face_landmarks.dat.bz2</code>给手动下载下来。
+当然如果网络还是不好，就把整个项目<code>git clone</code>下来，再去选对应文件。</p>
+<p>把这三个文件下载了之后，首先去新建位于<code>lib/security/howdy/dlib-data</code>的文件夹，把那三个压缩包（不要解压）放进去，再执行<code>sudo apt install howdy</code>的命令，现在就能顺利下载了。</p>
+<p>在Linux上用人脸解锁权限可真舒服，谁用谁知道。</p>
+<div class="admonition quote"><p class="admonition-title">《孔雀东南飞》</p>
+<p>多谢后世人, 诫之慎莫忘。</p>
+</div>
+<h2 id="后记">后记</h2>
+<p>过了一个多月，我终于等到了Linux Mint 21的镜像，虽说是beta版，但是至少高通的网卡能识别了。想起我刚拿到电脑时兴致勃勃地安装了Linux Mint 20.3以后才发现根本识别不了网卡，然而Windows系统在我全局安装时又被我删了，所以……</p>
+<p>现在也在逐步开始适应neovim，花了一天的时间配置，效果还不错，可能之后也会坚持着用吧，毕竟我还是比较喜欢专注于一个软件，自己写的snippets不舍得就此放弃。还好，自己也慢慢地攻克了难关，markdownpreview的附加依赖下载时不会更新进度，就让它安静地下载。
+中文符号输入不正确的bug还没有找到，不过大概率是某一个插件引起的，neovim还是空壳的时候，输入中文并没有任何问题，不过我还是利用利用snippets把这个bug尽量弥补了，比如我按中文分号<code>；</code>就会跳出来<code>¼&lt;xCSI&gt;</code>这玩意儿。所以我直接把那堆乱码设成了中文分号的触发键。后续打算再排查一下，也希望了解这种情况的人能够留言告诉缘由，不尽感激。
+还有一个比较奇怪的点，我在Windows上没有遇到，但是在Linux上遇到了的问题是明明好看的主题应用之后变得十分难看，还以为这是Linux系统特点。后面偶然看见讨论说还要<code>set termguicolors</code>，之后果然熟悉的配色又回来了。</p>
+<h2 id="后后记">后后记</h2>
+<p>我终于找到neovim输入部分中文符号跳出乱码的原因了。原因就是我在配置文件<code>init.vim</code>的autopairs插件配置语句里想当然加了中文的括号自动补全……</p>
+<div class="admonition failure"><p class="admonition-title">错误</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">AutoPairs</span> <span class="p">=</span> {<span class="s1">&#39;(&#39;</span>:<span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;[&#39;</span>:<span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="s1">&#39;{&#39;</span>:<span class="s1">&#39;}&#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span>:<span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span>:<span class="s1">&#39;&#34;&#39;</span><span class="p">,</span><span class="s2">&#34;（&#34;</span><span class="p">,</span><span class="s2">&#34;）&#34;</span>}<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>要不是那一瞬间的报错我还真就不知道哪里出了问题，足足有一年之久了。</p>
+<p>应改为：</p>
+<div class="admonition success"><p class="admonition-title">正确</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">let</span> <span class="nx">g</span>:<span class="nx">AutoPairs</span> <span class="p">=</span> {<span class="s1">&#39;(&#39;</span>:<span class="s1">&#39;)&#39;</span><span class="p">,</span><span class="s1">&#39;[&#39;</span>:<span class="s1">&#39;]&#39;</span><span class="p">,</span><span class="s1">&#39;{&#39;</span>:<span class="s1">&#39;}&#39;</span><span class="p">,</span><span class="s2">&#34;&#39;&#34;</span>:<span class="s2">&#34;&#39;&#34;</span><span class="p">,</span><span class="s1">&#39;&#34;&#39;</span>:<span class="s1">&#39;&#34;&#39;</span>}<span class="err">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<p>另外，现在感觉自己与编程这一事物渐行渐远，于是干脆抛弃了neovim，转而全心全意使用vscode。目前发现了Typst这一新鲜事物，准备入坑，就这样。</p>
+<p>道阻且长，继续努力吧。😃</p>
+<p>贴一张screenshot：</p>
+<p><img src="https://pic.imgdb.cn/item/62e7535b8c61dc3b8ea30d72.png" alt="screenshot" title="还行吧？"></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">Simon Young</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2022-06-21
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content">本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。转载请注明出处。</a><br /></span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/explanation/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">关于翻译xkcd-what if的一点说明</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/my-first-post/">
+            <span class="next-text nav-default">新篇章</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="SimonYoungCN/blogcomment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:simonchn@yeah.net" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/19604841/simon" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/SimonYoungCN" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/neusimon" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://space.bilibili.com/511414277" class="iconfont icon-bilibili" title="bilibili"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2022 - 
+    2025<span class="heart"><i class="iconfont icon-heart"></i></span><span>Simon Young</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script type="text/javascript" async src="/lib/mathjax/es5/tex-mml-chtml.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
