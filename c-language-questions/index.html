@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>C语言错题集 - Simon&#39;s Lodge</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Simon Young" /><meta name="description" content="准备考一下计算机二级C语言项目, 在此梳理考点。
+更新：优秀，开心！
+" /><meta name="keywords" content="code, xkcd, math, language, 技术, 数学, 翻译, 语言" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.127.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/c-language-questions/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.627576ade347b36215036158b2eab4369716004f391abce6336d4ff3ed344be2.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:url" content="http://localhost:1313/c-language-questions/">
+  <meta property="og:site_name" content="Simon&#39;s Lodge">
+  <meta property="og:title" content="C语言错题集">
+  <meta property="og:description" content="准备考一下计算机二级C语言项目, 在此梳理考点。
+更新：优秀，开心！">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2022-06-22T12:29:08+08:00">
+    <meta property="article:modified_time" content="2022-06-22T12:29:08+08:00">
+    <meta property="article:tag" content="技术">
+
+  <meta itemprop="name" content="C语言错题集">
+  <meta itemprop="description" content="准备考一下计算机二级C语言项目, 在此梳理考点。
+更新：优秀，开心！">
+  <meta itemprop="datePublished" content="2022-06-22T12:29:08+08:00">
+  <meta itemprop="dateModified" content="2022-06-22T12:29:08+08:00">
+  <meta itemprop="wordCount" content="2734">
+  <meta itemprop="keywords" content="技术">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="C语言错题集">
+  <meta name="twitter:description" content="准备考一下计算机二级C语言项目, 在此梳理考点。
+更新：优秀，开心！">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Simon&#39;s Lodge</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页🏡</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章📃</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">分类📚</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Simon&#39;s Lodge</a>
+</div>
+
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页🏡</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章📃</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">分类📚</a>
+      </li>
+  </ul>
+</nav>
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <p>准备考一下计算机二级C语言项目, 在此梳理考点。</p>
+<p>更新：优秀，开心！</p>
+<h1 id="程序设计和c语言">程序设计和C语言</h1>
+<h2 id="程序设计的基本概念">程序设计的基本概念</h2>
+<ol>
+<li>
+<p>可用伪代码、流程图、N-S结构图, 但E-R图不能用于描述算法。</p>
+</li>
+<li>
+<p>数据结构 + 算法 = 程序</p>
+</li>
+<li>
+<p>算法的特性:</p>
+</li>
+</ol>
+<ul>
+<li>有穷性 (一定会结束)</li>
+<li>确定性 (相同输入, 相同输出)</li>
+<li>有<strong>零个</strong>或多个输入</li>
+<li>有一个或多个输出</li>
+<li>可行性</li>
+</ul>
+<ol start="4">
+<li>
+<p>传统流程图: (1)起止框: 圆角矩形(2)处理框: 矩形(3)输入输出框: 平行四边形(4)判断框: 菱形(5)流程线: 箭头(6)连接点: 圆形。</p>
+</li>
+<li>
+<p>结构类型:</p>
+</li>
+</ol>
+<ul>
+<li>顺序结构</li>
+<li>选择结构</li>
+<li>循环结构(①当型: 满足则执行②直到型: 循环到满足)</li>
+</ul>
+<h2 id="c语言简介">C语言简介</h2>
+<ol>
+<li>程序中有且仅有一个主函数，可有若干个其他函数，由主函数直接或间接调用，但其他函数不能调用主函数。</li>
+</ol>
+<div class="admonition example"><p class="admonition-title">实例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="mi">212</span>         <span class="cm">/* 合法的 */</span>
+</span></span><span class="line"><span class="cl"><span class="mi">215u</span>        <span class="cm">/* 合法的 */</span>
+</span></span><span class="line"><span class="cl"><span class="mh">0xFeeL</span>      <span class="cm">/* 合法的 */</span>
+</span></span><span class="line"><span class="cl"><span class="mo">07</span><span class="mi">8</span>         <span class="cm">/* 非法的：8 不是八进制的数字 */</span>
+</span></span><span class="line"><span class="cl"><span class="mo">032UU</span>       <span class="cm">/* 非法的：不能重复后缀 */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mi">85</span>         <span class="cm">/* 十进制 */</span>
+</span></span><span class="line"><span class="cl"><span class="mo">0213</span>       <span class="cm">/* 八进制 */</span>
+</span></span><span class="line"><span class="cl"><span class="mh">0x4b</span>       <span class="cm">/* 十六进制 */</span>
+</span></span><span class="line"><span class="cl"><span class="mi">30</span>         <span class="cm">/* 整数 */</span>
+</span></span><span class="line"><span class="cl"><span class="mi">30u</span>        <span class="cm">/* 无符号整数 */</span>
+</span></span><span class="line"><span class="cl"><span class="mi">30l</span>        <span class="cm">/* 长整数 */</span>
+</span></span><span class="line"><span class="cl"><span class="mi">30ul</span>       <span class="cm">/* 无符号长整数 */</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="mf">3.14159</span>       <span class="cm">/* 合法的 */</span>
+</span></span><span class="line"><span class="cl"><span class="mf">314159E-5L</span>    <span class="cm">/* 合法的 */</span>
+</span></span><span class="line"><span class="cl"><span class="mi">510</span><span class="n">E</span>          <span class="cm">/* 非法的：不完整的指数 */</span>
+</span></span><span class="line"><span class="cl"><span class="mf">210f</span>          <span class="cm">/* 非法的：没有小数或指数 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="n">e55</span>          <span class="cm">/* 非法的：缺少整数或分数 */</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+<ol start="2">
+<li>除大括号、预处理命令和函数头之外，语句后要以 <code>;</code>结尾。</li>
+<li>C语言是一种结构化程序设计语言。</li>
+<li>结构化程序由顺序、分支、循环3种基本结构组成。</li>
+<li>结构化程序设计提倡模块化的设计方法，即“自顶向下，逐步细化”的原则。</li>
+<li>滥用<code>goto</code>语句将使程序的流程毫无规律，可读性差，对于初学者来说尽量不要使用。</li>
+<li>注释不能嵌套。</li>
+</ol>
+<h1 id="程序设计基础">程序设计基础</h1>
+<h2 id="常量变量和标识符">常量、变量和标识符</h2>
+<h3 id="标识符">标识符</h3>
+<ol>
+<li>由大小写字母（区分大小写）、数字和下划线组成，且必须以字母或下划线开头。</li>
+<li>使用关键字，如：<code>void</code>、<code>unsigned</code>等或含非法字符，如：<code>-</code>、<code>&amp;</code>等字符的标识符都是非法的标识符。</li>
+</ol>
+<h3 id="关键字">关键字</h3>
+<p>下表列出了 C 中的保留字。这些保留字不能作为常量名、变量名或其他标识符名称。<a href="https://www.runoob.com/cprogramming/c-basic-syntax.html" title="菜鸟教程">1</a></p>
+<table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auto</td>
+<td>声明自动变量</td>
+</tr>
+<tr>
+<td>break</td>
+<td>跳出当前循环</td>
+</tr>
+<tr>
+<td>case</td>
+<td>开关语句分支</td>
+</tr>
+<tr>
+<td>char</td>
+<td>声明字符型变量或函数返回值类型</td>
+</tr>
+<tr>
+<td>const</td>
+<td>定义常量，如果一个变量被 const 修饰，那么它的值就不能再被改变</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>结束当前循环，开始下一轮循环</td>
+</tr>
+<tr>
+<td>default</td>
+<td>开关语句中的&quot;其它&quot;分支</td>
+</tr>
+<tr>
+<td>do</td>
+<td>循环语句的循环体</td>
+</tr>
+<tr>
+<td>double</td>
+<td>声明双精度浮点型变量或函数返回值类型</td>
+</tr>
+<tr>
+<td>else</td>
+<td>条件语句否定分支（与 if 连用）</td>
+</tr>
+<tr>
+<td>enum</td>
+<td>声明枚举类型</td>
+</tr>
+<tr>
+<td>extern</td>
+<td>声明变量或函数是在其它文件或本文件的其他位置定义</td>
+</tr>
+<tr>
+<td>float</td>
+<td>声明浮点型变量或函数返回值类型</td>
+</tr>
+<tr>
+<td>for</td>
+<td>一种循环语句</td>
+</tr>
+<tr>
+<td>goto</td>
+<td>无条件跳转语句</td>
+</tr>
+<tr>
+<td>if</td>
+<td>条件语句</td>
+</tr>
+<tr>
+<td>int</td>
+<td>声明整型变量或函数</td>
+</tr>
+<tr>
+<td>long</td>
+<td>声明长整型变量或函数返回值类型</td>
+</tr>
+<tr>
+<td>register</td>
+<td>声明寄存器变量</td>
+</tr>
+<tr>
+<td>return</td>
+<td>子程序返回语句（可以带参数，也可不带参数）</td>
+</tr>
+<tr>
+<td>short</td>
+<td>声明短整型变量或函数</td>
+</tr>
+<tr>
+<td>signed</td>
+<td>声明有符号类型变量或函数</td>
+</tr>
+<tr>
+<td>sizeof</td>
+<td>计算数据类型或变量长度（即所占字节数）</td>
+</tr>
+<tr>
+<td>static</td>
+<td>声明静态变量</td>
+</tr>
+<tr>
+<td>struct</td>
+<td>声明结构体类型</td>
+</tr>
+<tr>
+<td>switch</td>
+<td>用于开关语句</td>
+</tr>
+<tr>
+<td>typedef</td>
+<td>用以给数据类型取别名</td>
+</tr>
+<tr>
+<td>unsigned</td>
+<td>声明无符号类型变量或函数</td>
+</tr>
+<tr>
+<td>union</td>
+<td>声明共用体类型</td>
+</tr>
+<tr>
+<td>void</td>
+<td>声明函数无返回值或无参数，声明无类型指针</td>
+</tr>
+<tr>
+<td>volatile</td>
+<td>说明变量在程序执行中可被隐含地改变</td>
+</tr>
+<tr>
+<td>while</td>
+<td>循环语句的循环条件</td>
+</tr>
+</tbody>
+</table>
+<p>C99 新增关键字：<code>_Bool</code>\ <code>_Complex</code>\ <code>_Imaginary</code>\ <code>inline</code>\ <code>restrict</code></p>
+<p>C11 新增关键字：
+<code>_Alignas</code>\ <code>_Alignof</code>\ <code>_Atomic</code>\ <code>_Generic</code>\ <code>_Noreturn</code>
+<code>_Static</code> <code>_assert</code>\  <code>_Thread_local</code></p>
+<h3 id="常量">常量</h3>
+<ul>
+<li>整型常量：不带小数点的数字。如<code>1</code>、<code>2</code>、<code>12</code>等。</li>
+<li>实型常量：带小数点的数字。如<code>2.1</code>、<code>12.5</code>、<code>3.14</code>等。</li>
+<li>字符型常量：带单引号的字符。如<code>'a'</code>、<code>'b'</code>、<code>'c'</code>等。</li>
+</ul>
+<p>其中整型常量和实型常量又被称为数值型常量。</p>
+<p>单引号用于表示单个字符常量或者转义字符，而双引号用于表示字符串常量。</p>
+<h4 id="符号常量">符号常量</h4>
+<p><code>#define 标识符 常量</code></p>
+<p>常量最好大写，做到“见名知义”。</p>
+<h3 id="变量">变量</h3>
+<h4 id="变量的定义">变量的定义</h4>
+<p><code>数据类型 变量名1[,变量名2,...];</code></p>
+<p><code>[]</code>里的内容代表可有可无。</p>
+<h4 id="变量的初始化">变量的初始化</h4>
+<p><code>数据类型 变量名1 [ = 初值][变量名2 [= 初值2]...];</code></p>
+<h2 id="数据类型">数据类型</h2>
+<p><img src="https://pic.imgdb.cn/item/62bd18101d64b07066ad6255.jpg" alt="数据类型" title="数据类型"></p>
+<h2 id="整型数据">整型数据</h2>
+<h3 id="整型变量">整型变量</h3>
+<h4 id="分类">分类</h4>
+<ul>
+<li>基本整型：int</li>
+<li>短整型：short int 或 short</li>
+<li>长整型：long int 或 long</li>
+</ul>
+<p>还有无符号型（unsigned），仅表示正数。默认为有符号数（signed）。</p>
+<h4 id="占用内存与值域">占用内存与值域</h4>
+<ul>
+<li>int 4字节</li>
+<li>short 2字节</li>
+<li>long 4字节</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型说明符</th>
+<th>取值范围</th>
+<th>范围2</th>
+<th style="text-align:center">分配字节数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[signed] int 有符号基本整型</td>
+<td>$$[-2147483648,2147483647]$$</td>
+<td>$$[-2^{31},2^{31}-1]$$</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td>unsigned [int] 无符号基本整型</td>
+<td>$$[0,4294967295]$$</td>
+<td>$$[0,2^{32}-1]$$</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td>[signed] short [int] 有符号短整型</td>
+<td>$$[-32768,32767]$$</td>
+<td>$$[-2^{15},2^{15}-1]$$</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td>unsigned short [int] 无符号短整型</td>
+<td>$$[0,65535]$$</td>
+<td>$$[0,2^{16}-1]$$</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td>[signed] long [int] 有符号长整型</td>
+<td>$$[-2147483648,2147483647]$$</td>
+<td>$$[-2^{31},2^{31}-1]$$</td>
+<td style="text-align:center">4</td>
+</tr>
+<tr>
+<td>unsigned long [int] 无符号长整型</td>
+<td>$$[0,4294967295]$$</td>
+<td>$$[0,2^{32}-1]$$</td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="定义">定义</h4>
+<p><code>类型说明符 变量名1 [, 变量名2...];</code></p>
+<h3 id="整型常量">整型常量</h3>
+<ul>
+<li>十进制</li>
+<li>八进制（以0为前缀）</li>
+<li>十六进制（以0x或0X为前缀）</li>
+</ul>
+<h2 id="实型数据">实型数据</h2>
+<h3 id="实型变量">实型变量</h3>
+<h4 id="分类-1">分类</h4>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th style="text-align:center">所占字节数</th>
+<th>有效位数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td style="text-align:center">4</td>
+<td>6~7</td>
+<td>$$[-3.4\times10^{-38},3.4\times10^{38}]$$</td>
+</tr>
+<tr>
+<td>double</td>
+<td style="text-align:center">8</td>
+<td>18~19</td>
+<td>$$[-1.7\times10^{-308},1.7\times10^{308}]$$</td>
+</tr>
+<tr>
+<td>long double</td>
+<td style="text-align:center">16</td>
+<td>18~19</td>
+<td>$$[-1.2\times10^{-4932},1.7\times10^{4932}]$$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="定义-1">定义</h4>
+<p><code>类型说明符 变量名1 [,变量名2,...];</code></p>
+<h4 id="舍入处理">舍入处理</h4>
+<p><code>float</code>有效位数为7位，<code>double</code>为16位。VC规定小数后最多保留6位。</p>
+<h3 id="实型常量">实型常量</h3>
+<h4 id="表示">表示</h4>
+<h5 id="十进制小数形式">十进制小数形式</h5>
+<p>必须有小数点，小数点位置不受限制。（<code>300.</code>、<code>.123</code>是合法小数）</p>
+<h5 id="指数形式">指数形式</h5>
+<p>由十进制数加阶码标志“e”或“E”以及阶码组成（只能为整数，可以带符号）组成。</p>
+<p>一般形式为：<code>尾数E/e整型指数</code></p>
+<p><code>11.2e0</code>合法，<code>1.12e1.0</code>不合法。</p>
+<h3 id="类型">类型</h3>
+<ul>
+<li>float</li>
+<li>double</li>
+</ul>
+<h2 id="字符型数据">字符型数据</h2>
+<h3 id="字符变量char">字符变量（char）</h3>
+<p>形式：<code>char 变量名1[,变量名2,...];</code></p>
+<div class="admonition example"><p class="admonition-title">实例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">c1</span><span class="p">,</span><span class="n">c2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">c1</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="n">c2</span><span class="o">=</span><span class="sc">&#39;b&#39;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这样就定义了两个字符型的变量c1和c2，并分别赋值为字符型常量&rsquo;a&rsquo;和&rsquo;b&rsquo;。</p>
+</div>
+<p><img src="https://www.runoob.com/wp-content/uploads/2022/03/ascii-1-1.png" alt="ascii" title="ascii表">图片来源<a href="https://www.runoob.com/wp-content/uploads/2022/03/ascii-1-1.png" title="菜鸟教程">2</a></p>
+<div class="admonition warning"><p class="admonition-title">区分</p>
+<p>使用<code>char</code>时，用<code>%c</code>会打印出ascii码对应的字符，而<code>%d</code>会直接打印出十进制ascii码。<a href="https://stackoverflow.com/questions/10947965/why-is-c-used-in-c" title="stackoverflow">3</a></p>
+</div>
+<h3 id="字符常量">字符常量</h3>
+<p>用一对<em>单引号</em>括起来的<strong>单个字符</strong>。</p>
+<div class="admonition example"><p class="admonition-title">实例</p>
+<p><code>'a'</code>、<code>'b'</code>、<code>'#'</code>都是合法的字符常量。</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>字符形式</th>
+<th>功能</th>
+<th>十进制ASCII码值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\n</td>
+<td>换行</td>
+<td>10</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>水平制表<code>tab</code></td>
+<td>9</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格</td>
+<td>8</td>
+</tr>
+<tr>
+<td>\v</td>
+<td>空操作</td>
+<td>0</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+<td>13</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页</td>
+<td>12</td>
+</tr>
+<tr>
+<td>\\</td>
+<td>反斜线<code>\</code></td>
+<td>92</td>
+</tr>
+<tr>
+<td>\'</td>
+<td>单引号<code>'</code></td>
+<td>39</td>
+</tr>
+<tr>
+<td>\&quot;</td>
+<td>双引号<code>&quot;</code></td>
+<td>34</td>
+</tr>
+</tbody>
+</table>
+<h3 id="字符串常量">字符串常量</h3>
+<p>用一对双引号括起来的零个或多个字符的序列。</p>
+<p>字符常量可以赋值给字符变量，如<code>char b='a';</code>，但不能把一个字符串常量赋给一个字符变量，同时也不能对字符串常量赋值。</p>
+<h2 id="算数运算符和算术表达式">算数运算符和算术表达式</h2>
+<h3 id="算术运算符">算术运算符</h3>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>运算符</th>
+<th>运算规则</th>
+<th>运算对象</th>
+<th>运算结果</th>
+<th>类别</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>加</td>
+<td>+</td>
+<td>加法</td>
+<td>整型或浮点型</td>
+<td>整型或浮点型</td>
+<td>双目</td>
+</tr>
+<tr>
+<td>减</td>
+<td>-</td>
+<td>减法</td>
+<td>整型或浮点型</td>
+<td>整型或浮点型</td>
+<td>双目</td>
+</tr>
+<tr>
+<td>乘</td>
+<td>*</td>
+<td>乘法</td>
+<td>整型或浮点型</td>
+<td>整型或浮点型</td>
+<td>双目</td>
+</tr>
+<tr>
+<td>除</td>
+<td>/</td>
+<td>除法</td>
+<td>整型或浮点型</td>
+<td>整型或浮点型</td>
+<td>双目</td>
+</tr>
+<tr>
+<td>负</td>
+<td>-</td>
+<td>取负值</td>
+<td>整型或浮点型</td>
+<td>整型或浮点型</td>
+<td>单目</td>
+</tr>
+<tr>
+<td>模</td>
+<td>%</td>
+<td>取余</td>
+<td>整型</td>
+<td>整型</td>
+<td>双目</td>
+</tr>
+<tr>
+<td>自增1</td>
+<td>++</td>
+<td>自增1</td>
+<td>整型</td>
+<td>整型</td>
+<td>单目</td>
+</tr>
+<tr>
+<td>自减1</td>
+<td>&ndash;</td>
+<td>自减1</td>
+<td>整型</td>
+<td>整型</td>
+<td>单目</td>
+</tr>
+</tbody>
+</table>
+<p>单/双目代表参与运算的运算符个数。</p>
+<h2 id="赋值运算符和赋值表达式">赋值运算符和赋值表达式</h2>
+<h3 id="复合的赋值表达式">复合的赋值表达式</h3>
+<p><code>变量 operater = 表达式</code>也等价于<code>变量 = 变量 operater（表达式）</code>
+其中operater代表赋值或其他运算符。</p>
+<div class="admonition example"><p class="admonition-title">实例</p>
+<p><code>a=a+1</code>等同于<code>a+=1</code></p>
+</div>
+<h3 id="自增和自减运算符">自增和自减运算符</h3>
+<p>自增1 <code>++</code>，自减1 <code>--</code></p>
+<h4 id="前置运算">前置运算</h4>
+<p><code>++a</code>或<code>--a</code>，先将变量值加（或减）1，再参与其他运算。</p>
+<h4 id="后置运算">后置运算</h4>
+<p><code>a++</code>或<code>a--</code>，先参与其他运算，再将变量值加（或减）1。</p>
+<h1 id="顺序结构程序设计">顺序结构程序设计</h1>
+<h2 id="数据的输入与输出">数据的输入与输出</h2>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>scanf</code></td>
+<td>格式输入</td>
+</tr>
+<tr>
+<td><code>printf</code></td>
+<td>格式输出</td>
+</tr>
+<tr>
+<td><code>getchar</code></td>
+<td>字符输入</td>
+</tr>
+<tr>
+<td><code>putchar</code></td>
+<td>字符输出</td>
+</tr>
+<tr>
+<td><code>gets</code></td>
+<td>字符串输入</td>
+</tr>
+<tr>
+<td><code>puts</code></td>
+<td>字符串输出</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据的输入scanf函数">数据的输入——scanf函数</h2>
+<div class="admonition example"><p class="admonition-title">实例</p>
+<p><code>scanf(&quot;%d%c%x&quot;,&amp;a,&amp;b);</code></p>
+</div>
+<table>
+<thead>
+<tr>
+<th>格式字符</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d</td>
+<td>输入十进制整数</td>
+</tr>
+<tr>
+<td>c</td>
+<td>输入单个字符</td>
+</tr>
+<tr>
+<td>o</td>
+<td>以八进制形式输入整型数</td>
+</tr>
+</tbody>
+</table>
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="SimonYoungCN/blogcomment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:simonchn@yeah.net" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/19604841/simon" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/SimonYoungCN" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/neusimon" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://space.bilibili.com/511414277" class="iconfont icon-bilibili" title="bilibili"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2022 - 
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Simon Young</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script type="text/javascript" async src="/lib/mathjax/es5/tex-mml-chtml.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

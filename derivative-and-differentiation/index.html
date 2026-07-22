@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>导数与微分 - Simon&#39;s Lodge</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Simon Young" /><meta name="description" content="导数定义 速度：匀速、非匀速 $\lim\limits_{t \to t_0} \frac{f(t)-f(t_0)}{t-t_0}$代表从$t_0$到$t$的平均速度。 切线 $y=f(x)$" /><meta name="keywords" content="code, xkcd, math, language, 技术, 数学, 翻译, 语言" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.127.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/derivative-and-differentiation/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="/sass/main.min.627576ade347b36215036158b2eab4369716004f391abce6336d4ff3ed344be2.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:url" content="http://localhost:1313/derivative-and-differentiation/">
+  <meta property="og:site_name" content="Simon&#39;s Lodge">
+  <meta property="og:title" content="导数与微分">
+  <meta property="og:description" content="导数定义 速度：匀速、非匀速 $\lim\limits_{t \to t_0} \frac{f(t)-f(t_0)}{t-t_0}$代表从$t_0$到$t$的平均速度。 切线 $y=f(x)$">
+  <meta property="og:locale" content="zh_cn">
+  <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2022-08-17T15:11:01+08:00">
+    <meta property="article:modified_time" content="2022-08-17T15:11:01+08:00">
+    <meta property="article:tag" content="数学">
+
+  <meta itemprop="name" content="导数与微分">
+  <meta itemprop="description" content="导数定义 速度：匀速、非匀速 $\lim\limits_{t \to t_0} \frac{f(t)-f(t_0)}{t-t_0}$代表从$t_0$到$t$的平均速度。 切线 $y=f(x)$">
+  <meta itemprop="datePublished" content="2022-08-17T15:11:01+08:00">
+  <meta itemprop="dateModified" content="2022-08-17T15:11:01+08:00">
+  <meta itemprop="wordCount" content="1235">
+  <meta itemprop="keywords" content="数学">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="导数与微分">
+  <meta name="twitter:description" content="导数定义 速度：匀速、非匀速 $\lim\limits_{t \to t_0} \frac{f(t)-f(t_0)}{t-t_0}$代表从$t_0$到$t$的平均速度。 切线 $y=f(x)$">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Simon&#39;s Lodge</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">主页🏡</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">文章📃</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">分类📚</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Simon&#39;s Lodge</a>
+</div>
+
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">主页🏡</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">文章📃</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">分类📚</a>
+      </li>
+  </ul>
+</nav>
+
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+  <div class="post-content">
+    <h1 id="导数定义">导数定义</h1>
+<ol>
+<li>速度：匀速、非匀速</li>
+</ol>
+<p>$\lim\limits_{t \to t_0} \frac{f(t)-f(t_0)}{t-t_0}$代表从$t_0$到$t$的平均速度。</p>
+<ol start="2">
+<li>切线</li>
+</ol>
+<p>$y=f(x)$在$x_0$的某个邻域内有定义。在$x_0$处取$\Delta x，x_0 \rightarrow x_0 +\Delta x$</p>
+<p>$\Delta y=f(x_0+\Delta x)-f(x_0)$</p>
+<p>(1)$f^{\prime}(x)=\lim\limits_{\Delta x \to 0} \frac{\Delta y}{\Delta x}=\lim\limits_{\Delta x \to 0} \frac{f(x_0+\Delta x)-f(x_0)}{\Delta x}$存在，则称$x_0$处可导。</p>
+<p>$y^{\prime}\big|<em>{x = x_0}$或$f^{\prime}(x_0)$或$\frac{\mathrm{d} y}{\mathrm{d} x} \big|</em>{x = x_0}$或$\frac{df(x)}{dx}\big|_{x = x_0}$</p>
+<p>(2)$\lim\limits_{h \to 0} \frac{f(x_0+h)-f(x_0)}{h}$</p>
+<p>(3)$\lim\limits_{x \to x_0} \frac{f(x)-f(x_0)}{x-x_0}$</p>
+<p>例题：
+(1)$f(x)=C$</p>
+<p>$\lim\limits_{h \to 0} \frac{f(x+h)-f(x)}{h}=0 (C)^{\prime}=0$</p>
+<p>(2)$f(x)=x^{n}$</p>
+<p>(一)$n=1$时，$\lim\limits_{h \to 0} \frac{f(x+h)-f(x)}{h}=\lim\limits_{h \to 0} \frac{x+h-x}{h}=1 (x)^{\prime}=1$</p>
+<p>(二)$n &gt; 1$时，$\lim\limits_{h \to 0} \frac{(x+h)^{n}-x^{n}}{h}=\lim\limits_{h \to 0} [nx^{n-1}+\frac{n(n-1)}{2}x^{n-2}+ \cdots +h^{n-1}]=nx^{n-1}$</p>
+<p>综上，$(x^{n})^{\prime}=
+\begin{cases}
+1&amp;n=1\\
+nx^{n-1}&amp; n &gt; 1
+\end{cases}
+$</p>
+<p>上式隐含$x \ne 0$条件。</p>
+<p>(3)$f(x)=x^{\mu }(\mu \in R)$</p>
+<p>$\frac{f(x+h)-f(x)}{h}=\frac{(x+h)^{\mu }-x^{\mu }}{h}=x^{\mu -1}\frac{(1+\frac{h}{x})^{\mu }-1}{\frac{h}{x}}$</p>
+<p>$(x^{\mu })^{\prime}=\mu x^{\mu -1}$</p>
+<p>$(\sqrt{x})^{\prime}=(x^{\frac{1}{2}})^{\prime}=\frac{1}{2}x^{\frac{1}{2}-1}=\frac{1}{2}x^{-\frac{1}{2}}$</p>
+<p>(4)$f(x)-sinx$</p>
+<p>$\lim\limits_{h \to 0} \frac{f(x+h)-f(x)}{h}=\lim\limits_{h \to 0} \frac{sin(x+h)-sinx}{h}=\lim\limits_{h \to 0} \frac{1}{h}\cdot 2cos(x+\frac{h}{2})sin\frac{h}{2}=cosx$</p>
+<p>即$(sinx)^{\prime}=cosx$。$(cosx)^{\prime}=-sinx$</p>
+<p>(5)$(a^{x})^{\prime}=a^{x}\ln a$，$(e^{x})^{\prime}=e^{x}$</p>
+<p>(6)$(\log_{a}x )^{\prime}=\frac{1}{x \ln a}$</p>
+<p>$(\ln x)^{\prime}=\frac{1}{x}$</p>
+<p>(7)$y=\lvert x \rvert$在$x=0$处导数</p>
+<p>左侧导数$\lim\limits_{h \to 0^{-}} \frac{f(x+h)-f(x)}{h}=\lim\limits_{h \to 0^{-}}\frac{-h-0}{h} =-1$</p>
+<p>右侧导数$\lim\limits_{h \to 0^{+}} \frac{h-0}{h}=1$</p>
+<h2 id="单侧导数">单侧导数</h2>
+<p>某侧逼近。</p>
+<h3 id="左导数">左导数</h3>
+<p>$f_{-}^{\prime}(x_0)=\lim\limits_{h \to 0^{-}} \frac{f(x_0+h)-f(x_0)}{h}=\lim\limits_{x \to x_0^{-}} \frac{f(x)-f(x_0)}{x-x_0}$</p>
+<h3 id="右导数">右导数</h3>
+<p>$f_{+}^{\prime}(x_0)=\lim\limits_{h \to 0^{+}} \frac{f(x_0+h)-f(x_0)}{h}=\lim\limits_{x \to x_0^{+}} \frac{f(x)-f(x_0)}{x-x_0}$</p>
+<p>导数$\lim\limits_{h \to 0} \frac{f(x+h)-f(x)}{h}$</p>
+<p>或$\lim\limits_{x \to x_0} \frac{f(x)-f(x_0)}{x-x_0}$</p>
+<p>可导$\Leftrightarrow$左、右导数存在且相等</p>
+<p>若$(a,b)$（开区间）可导，左端点$a$，$f_{+}^{\prime}(a)$存在，右端点$b$，$f_{-}^{\prime}(b)$存在，则$[a,b]$（闭区间）上可导。</p>
+<h2 id="可导与连续的关系">可导与连续的关系</h2>
+<p>可导一定连续，连续不一定可导。
+$\lim\limits_{\Delta x \to 0} \frac{\Delta y}{\Delta x}\Rightarrow \lim\limits_{\Delta x \to 0} \Delta y=0$</p>
+<p>(10)$y=\sqrt[3]{x}$在$(-\infty,+\infty)$连续。$x=0$处不可导。</p>
+<p>$\lim\limits_{h \to 0} \frac{f(0+h)-f(0)}{h}=\lim\limits_{h \to 0} \frac{\sqrt[3]{h}}{h}=\lim\limits_{h \to 0} h^{-\frac{2}{3}}=+\infty$</p>
+<p>$(\sqrt[3]{x})^{\prime}=(x^{\frac{1}{3}})^{\prime}=\frac{1}{3}x^{-\frac{2}{3}}=\frac{1}{3}\cdot \frac{1}{x^{\frac{2}{3}}}$</p>
+<p>切线不能垂直于$x$轴。</p>
+<h2 id="求导法则">求导法则</h2>
+<h3 id="和差积商">和差积商</h3>
+<ol>
+<li>$(u \pm v)^{\prime}=u ^{\prime}\pm v^{\prime}$</li>
+</ol>
+<p>$(x^2+sinx)^{\prime}=(x^2)^{\prime}+(sinx)^{\prime}=2x+cosx$</p>
+<ol start="2">
+<li>$(uv)^{\prime}=u ^{\prime}v+uv^{\prime}$</li>
+</ol>
+<p>$(x^3e^{x})^{\prime}=(x^3)^{\prime}e^{x}+x^3(e^{x})^{\prime}=3x^2e^{x}+x^3e^{x}$</p>
+<p>同理：$(Cv)^{\prime}=Cv^{\prime}$，其中$C$为常数。</p>
+<p>$(5sinx)^{\prime}=5(sinx)^{\prime}=5cosx$</p>
+<ol start="3">
+<li>$(\frac{u}{v})^{\prime}=\frac{u ^{\prime}v-uv^{\prime}}{v^2}=\frac{子^{\prime}母-子母^{\prime}}{母^2}$</li>
+</ol>
+<p>$(\frac{sinx}{x})^{\prime}=\frac{cosx \cdot x-sinx \cdot 1}{x^2}$</p>
+<p>拓展：$(u+v+w)^{\prime}=u ^{\prime}+v^{\prime}+w^{\prime}$</p>
+<p>$(uvw)^{\prime}=u ^{\prime}vw+uv^{\prime}w+uvw^{\prime}$</p>
+<p>(1)$y=2x^3-5x^2+3x-7$</p>
+<p>$y^{\prime}=6x^2-10x+3$</p>
+<p>(2)$y=x^3+4cosx-sin\frac{\pi }{2}$</p>
+<p>$y^{\prime}=3x^2-4sinx$</p>
+<p>(3)$y=e^{x}(sinx+cosx)$</p>
+<p>$y^{\prime}=e^{x}(sinx+cosx)+e^{x}(cosx-sinx)=2e^{x}cosx$</p>
+<p>(4)$y=tanx=\frac{sinx}{cosx}$</p>
+<p>$y^{\prime}=\frac{cos^2x+sin^2x}{cos^2x}=\frac{1}{cos^2x}=sec^2x$</p>
+<p>$secx=\frac{1}{cosx},csc=\frac{1}{sinx}$（其中$sec$为正割，$csc$为余割）</p>
+<p>(5)$y=secx=\frac{1}{cosx}$</p>
+<p>$y^{\prime}=\frac{sinx}{cos^2x}=\frac{sinx}{cosx}\cdot \frac{1}{cosx}=secx \cdot tanx$</p>
+<p>三角函数求导总结：</p>
+<p>$(sinx)^{\prime}=cosx,(cosx)^{\prime}=-sinx$</p>
+<p>$(tanx)^{\prime}=sec^2x,(cotx)^{\prime}=-csc^2x$</p>
+<p>$(secx)^{\prime}=secxtanx,(cscx)^{\prime}=-cscxcotx$</p>
+<p>正切、割、弦求导均不变号，余切、割、弦求导要变号。</p>
+<h3 id="反函数的求导法则">反函数的求导法则</h3>
+<p>定理：$x=f(y)$在$I_{y}$内单调，可导，$f^{\prime}(y)\ne 0$，反函数$y=f^{-1}(x)$</p>
+<p>$$
+[f^{-1}(x)]^{\prime}=\frac{1}{f^{\prime}(y)}
+$$
+$$
+\frac{\mathrm{d} y}{\mathrm{d} x} =\frac{1}{\frac{\mathrm{d} x}{\mathrm{d} y} }
+$$</p>
+<p>$$
+\frac{\Delta y}{\Delta x}=\frac{1}{\frac{\Delta x}{\Delta y}}
+$$
+$\lim\limits_{\Delta x \to 0} \frac{\Delta y}{\Delta x}$其中$\Delta x$不为$0$，但$\Delta y$不一定。</p>
+<p>$f^{-1}(x+\Delta x)-f^{-1}(x)\ne 0$</p>
+<p>例：$y=x^2(x &gt; 0)\rightarrow x=\sqrt{y}=y^{\frac{1}{2}}$</p>
+<p>$y^{\prime}=2x,\frac{\mathrm{d} x}{\mathrm{d} y} =\frac{1}{2}\frac{1}{y^{\frac{1}{2}}}$</p>
+<p>$\therefore 2x=\frac{1}{\frac{1}{2}\frac{1}{x}}$</p>
+
+  </div>
+</article>
+        </div>
+        
+
+  
+
+  
+    <script src="https://utteranc.es/client.js"
+            repo="SimonYoungCN/blogcomment"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:simonchn@yeah.net" class="iconfont icon-email" title="email"></a>
+      <a href="https://stackoverflow.com/users/19604841/simon" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://github.com/SimonYoungCN" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/neusimon" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://space.bilibili.com/511414277" class="iconfont icon-bilibili" title="bilibili"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> 本站总访问量 <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 次 </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> 本站总访客数 <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> 人 </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2022 - 
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Simon Young</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        }
+    };
+  </script>
+  <script type="text/javascript" async src="/lib/mathjax/es5/tex-mml-chtml.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

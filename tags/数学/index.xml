@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>导数与微分</title>
-      <link>http://localhost:1313/post/derivative-and-differentiation/</link>
+      <link>http://localhost:1313/derivative-and-differentiation/</link>
       <pubDate>Wed, 17 Aug 2022 15:11:01 +0800</pubDate>
-      <guid>http://localhost:1313/post/derivative-and-differentiation/</guid>
+      <guid>http://localhost:1313/derivative-and-differentiation/</guid>
       <description>导数定义 速度：匀速、非匀速 $\lim\limits_{t \to t_0} \frac{f(t)-f(t_0)}{t-t_0}$代表从$t_0$到$t$的平均速度。 切线 $y=f(x)$</description>
     </item>
   </channel>
